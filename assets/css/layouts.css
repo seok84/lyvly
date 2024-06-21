@@ -1,0 +1,157 @@
+/* 기본 넓이 */
+.width-half {
+    width: 50%;
+}
+
+.width-full {
+    width: 100%;
+}
+
+.width-120 {
+    max-width: 12rem;
+}
+
+.width-150 {
+    max-width: 15rem;
+}
+
+/* display 속성 */
+.flex {
+    display: flex;
+}
+
+/* 최소 높이 */
+.fullHeight {
+    min-height: calc(100vh - 50.2rem);
+}
+
+/* inner */
+.inner {
+    width: 100%;
+    max-width: 119.4rem;
+    margin: 0 auto;
+}
+
+.user-inner {
+    max-width: 46rem;
+    min-height: 60vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 마진값 지정 */
+.mt-10 {
+    margin-top: 1rem;
+}
+
+.mt-20 {
+    margin-top: 2rem;
+}
+
+.mt-30 {
+    margin-top: 3rem;
+}
+
+.mt-40 {
+    margin-top: 4rem;
+}
+
+.mt80 {
+    margin-top: 8rem;
+}
+
+.mb-10 {
+    margin-bottom: 1rem;
+}
+.mb-20 {
+    margin-bottom: 2rem;
+}
+.mb-40 {
+    margin-bottom: 4rem;
+}
+
+.padding-top10 {
+    padding-top: 1rem;
+}
+
+.padding-bottom10 {
+    padding-bottom: 1rem;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* 영역 분할 */
+.screen-area {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 4rem;
+}
+.screen-area-left {
+    flex: 1;
+    width: 100%;
+    padding-right: 3rem;
+}
+
+.screen-area-right {
+    width: 30.6rem;
+}
+
+.screen-area .editor-area {
+    width: 100%;
+}
+
+/* =============== */
+/* ==== 반응형 ==== */
+/* =============== */
+
+/* 노트북 */
+@media (max-width: 1194px) {
+    .inner,
+    .user-inner {
+        padding-left: 1.6rem;
+        padding-right: 1.6rem;
+    }
+
+    header[data-page="display-fresh-food"] ~ .inner,
+    header[data-page="display-pb"] ~ .inner {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* 영역 분할 */
+    .screen-area-left {
+        margin-right: 0;
+    }
+}
+
+/* 태블릿 */
+@media (max-width: 991px) {
+    .screen-area-left {
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    /* 영역 분할 */
+
+    .pc {
+        display: none !important;
+    }
+
+    .mobile {
+        display: block !important;
+    }
+}
+
+/* 모바일 */
+@media (max-width: 480px) {
+    .user-inner {
+        min-height: unset;
+        padding-bottom: 10vh;
+    }
+}

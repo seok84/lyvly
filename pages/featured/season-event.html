@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="/assets/css/reset.css" />
+		<link rel="stylesheet" href="/static/event/roulette-event.css" />
+	</head>
+	<body>
+		<section class="inner">
+			<div class="event-content">
+				<h3 class="page-title page-title-event">룰렛 이벤트</h3>
+				<div class="event-title">
+					<div>
+						<p class="date">[2023.02.22 ~ 2024.03.04]</p>
+						<p class="title">이벤트상세 제목</p>
+					</div>
+					<button type="button" class="sns_share">sns 공유하기</button>
+				</div>
+				<div class="event-edit-content">
+					<!-- html editor로 등록되는 영역 -->
+					<br />
+					<img src="/static/images/event_roulette/bg_01.png" alt="01" />
+					<div class="roulette-container">
+						<div class="remain-counter">
+							<span>룰렛 잔여 횟수</span>
+							<span class="divider"></span>
+							<span><strong>3</strong>회</span>
+						</div>
+						<div class="position-center roulette">
+							<img src="/static/images/event_roulette/img_arr.png" class="arrow" />
+							<canvas class="roulette-canvas canvas-01" width="600px" height="600px"></canvas>
+							<canvas class="roulette-canvas canvas-02" width="600px" height="600px"></canvas>
+							<button type="button" class="position-center" onClick="rotate()">
+								<img src="/static/images/event_roulette/img_btn.png" alt="룰렛 돌리기 버튼" />
+							</button>
+							<img src="/static/images/event_roulette/img_back.png" class="back-circle" />
+						</div>
+						<img src="/static/images/event_roulette/bg_02.png" alt="02" />
+					</div>
+					<img src="/static/images/event_roulette/bg_03.png" alt="03" />
+				</div>
+				<script></script>
+			</div>
+		</section>
+		<script>
+			const windowWidth = window.outerWidth;
+			const canvas1 = document.querySelector(".canvas-01");
+			const canvas2 = document.querySelector(".canvas-02");
+			const context1 = canvas1.getContext("2d");
+			const context2 = canvas2.getContext("2d");
+
+			if (windowWidth > 1025) {
+				canvas1.style.width = "600px";
+				canvas1.style.height = "600px";
+				canvas2.style.width = "600px";
+				canvas2.style.height = "600px";
+			} else if (1024 >= windowWidth && windowWidth > 688) {
+				canvas1.style.width = "580px";
+				canvas1.style.height = "580px";
+				canvas2.style.width = "580px";
+				canvas2.style.height = "580px";
+			} else if (windowWidth <= 687) {
+				canvas1.style.width = `${windowWidth - 100}px`;
+				canvas1.style.height = `${windowWidth - 100}px`;
+				canvas2.style.width = `${windowWidth - 100}px`;
+				canvas2.style.height = `${windowWidth - 100}px`;
+			}
+			// key1 : 최대 글자수 10자 (국문, 숫자 포함)
+			// key2 : 최대 글자수 5자 (국문, 숫자 포함)
+			const txtResult = [
+				{
+					key1: "아쉽지만...",
+					key2: "꽝",
+				},
+				{
+					key1: "일이삼",
+					key2: "일이삼",
+				},
+				{
+					key1: "일이삼사오",
+					key2: "일이삼사오",
+				},
+				{
+					key1: "적립금",
+					key2: "1만원",
+				},
+				{
+					key1: "일이삼사오육칠팔구십",
+					key2: "12345678",
+				},
+				{
+					key1: "할인쿠폰",
+					key2: "할인",
+				},
+			];
+			const text1 = [];
+			const text2 = [];
+
+			txtResult.forEach((item) => {
+				text1.push(item.key1);
+				text2.push(item.key2);
+			});
+
+			const colors = ["#f4f4f4", "#ffffff"]; // 배경색
+			const txtColors = ["#272727", "#ef3231"]; //텍스트 색상
+
+			const newMake = () => {
+				const [cw, ch] = [canvas1.width / 2, canvas1.height / 2];
+				const arc = Math.PI / (text1.length / 2);
+
+				for (let i = 0; i < text1.length; i++) {
+					context1.beginPath();
+					context1.fillStyle = colors[i % colors.length];
+					context1.moveTo(cw, ch);
+					context1.arc(cw, ch, cw, arc * (i - 1), arc * i);
+					context1.fill();
+					context1.closePath();
+				}
+
+				//텍스트 설정
+				context1.font = "700 2.2rem 'GmarketSansBold'";
+				context1.textAlign = "center";
+				context2.font = "700 3.5rem 'GmarketSansBold'";
+				context2.textAlign = "center";
+
+				//text1
+				for (let i = 0; i < text1.length; i++) {
+					const angle = arc * i + arc / 2;
+					context1.save();
+					context1.translate(cw + Math.cos(angle) * (cw - 70), ch + Math.sin(angle) * (ch - 70));
+					context1.rotate(angle + Math.PI / 2);
+					context1.fillStyle = txtColors[i % txtColors.length];
+					text1[i].split(" ").forEach((text, j) => {
+						context1.fillText(text, 0, 30 * j);
+					});
+					context1.restore();
+				}
+				//text2
+				for (let i = 0; i < text2.length; i++) {
+					const angle = arc * i + arc / 2;
+					context2.save();
+					context2.translate(cw + Math.cos(angle) * (cw - 110), ch + Math.sin(angle) * (ch - 110));
+					context2.rotate(angle + Math.PI / 2);
+					context2.fillStyle = txtColors[i % txtColors.length];
+					text2[i].split(" ").forEach((text, j) => {
+						context2.fillText(text, 0, 30 * j);
+					});
+
+					context2.restore();
+				}
+			};
+
+            let rotateValue  = 0;
+
+			function rotate() {
+				setTimeout(() => {
+					const ran = Math.floor(Math.random() * text1.length);
+					const arc = 360 / text1.length;
+                    rotateValue ++;
+					const rotate = ran * arc + 3600 * rotateValue  + arc * 3 - arc;
+					console.log(ran);
+					console.log(arc);
+					console.log(rotate);
+
+					canvas1.style.transform = `translate(-50%, -50%) rotate(-${rotate}deg)`;
+					canvas1.style.transition = `2s`;
+					canvas2.style.transform = `translate(-50%, -50%)  rotate(-${rotate}deg)`;
+					canvas2.style.transition = `2s`;
+
+					setTimeout(() => alert(`${text1[ran]} ${text2[ran]}`), 2000);
+				}, 1);
+			}
+
+			newMake();
+		</script>
+	</body>
+</html>

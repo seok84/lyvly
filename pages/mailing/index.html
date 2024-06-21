@@ -1,0 +1,2553 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>{site_name} 메일링</title>
+		<style>
+			.mailing-inner div a {
+				padding: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div style="display: flex; position: relative; flex-direction: row" class="mailing-inner">
+			<div
+				style="
+					width: 30%;
+					position: fixed;
+					top: 0;
+					left: 0;
+					display: flex;
+					flex-direction: column;
+					justify-content: flex-start;
+					align-items: flex-start;
+					font-size: 14px;
+				">
+				<p style="color: red; margin: 10px">- 클릭 시 해당 메일링으로 이동합니다</p>
+				<a href="#sign-up">회원가입</a>
+				<!-- <a href="#update-account-information">회원정보수정</a> -->
+				<a href="#temporary-password">임시비밀번호</a>
+				<a href="#inquiry-response">문의답변</a>
+				<a href="#payment-pending">입금대기</a>
+				<a href="#payment-completed">결제완료</a>
+				<a href="#delivery-start">배송 중</a>
+				<!-- <a href="#order-cancellation-completed">주문취소완료</a> -->
+				<a href="#point-expiration">포인트소멸</a>
+				<a href="#dormancy-notice">휴면안내</a>
+				<!-- <a href="#refund-request">환불요청</a> -->
+				<!-- <a href="#consent-confirmation">수신동의확인</a> -->
+			</div>
+			<div
+				style="
+					width: 70%;
+					position: absolute;
+					top: 0;
+					left: 30%;
+					display: flex;
+					flex-direction: column;
+					justify-content: flex-start;
+					align-items: flex-start;
+				">
+				<!-- 회원가입 -->
+				<div id="sign-up">
+					<table
+						style="
+							display: table;
+							border-collapse: collapse;
+							border-spacing: 0;
+							width: 500px;
+							max-width: 500px;
+							margin: 0 auto;
+							letter-spacing: -0.5px;
+							word-break: keep-all;
+							font-family: Pretendard, Apple SD Gothic Neo, -apple-system, BlinkMacSystemFont, NanumBarunGothic, Malgun Gothic, 맑은 고딕, Dotum,
+								돋움, sans-serif;
+						">
+						<tr>
+							<td>
+								<img src="{site_url}/assets/images/common/layout/img_logo.png" alt="{site_name} " style="width: 230px; margin: 60px 0 20px" />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h2 style="font-size: 22px; font-weight: 800; text-align: center; margin: 40px; display: block">
+									<span style="color: #da0015">{site_name} 회원가입</span>을 축하드립니다!
+								</h2>
+							</td>
+						</tr>
+						<tr>
+							<td style="text-align: center">
+								고객님께서 만족스러운 쇼핑을 하실 수 있도록 노력하겠습니다.<br />
+								지금부터 {site_name} 에서 고객님만의 특별한 혜택을 누리세요.<br /><br />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p style="font-size: 16px; font-weight: 700; text-align: left; margin: 40px 0 0">{name}님의 가입정보</p>
+								<table style="text-align: left; border-collapse: collapse; width: 100%">
+									<tbody style="font-size: 14px">
+										<tr style="border-top: 1px solid #eee; border-bottom: 1px solid #eee">
+											<th
+												style="
+													font-weight: bold;
+													padding: 14px 20px;
+													width: 114px;
+													box-sizing: border-box;
+													text-align: left;
+													background-color: #fafafa;
+													vertical-align: top;
+												">
+												아이디
+											</th>
+											<td style="padding: 14px 20px; line-height: 1.36">{id}</td>
+										</tr>
+										<tr style="border-top: 1px solid #eee; border-bottom: 1px solid #eee">
+											<th
+												style="
+													font-weight: bold;
+													padding: 14px 20px;
+													width: 114px;
+													box-sizing: border-box;
+													text-align: left;
+													background-color: #fafafa;
+													vertical-align: top;
+												">
+												가입날짜
+											</th>
+											<td style="padding: 14px 20px; line-height: 1.36">{regdate}</td>
+										</tr>
+									</tbody>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<br />
+								<a
+									href="{site_url}"
+									style="
+										text-decoration: none;
+										background-color: #f02d40;
+										color: #ffffff;
+										width: 100%;
+										padding: 21px 0 20px;
+										text-align: center;
+										display: block;
+										border-radius: 10px;
+										font-size: 18px;
+										font-weight: 700;
+									"
+									>{site_name} 방문하기</a
+								><br /><br />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p style="font-size: 12px; margin: 0; padding: 0; line-height: 1.5; color: #757575; text-align: left">
+									·&nbsp;본 메일은 발신전용으로 회신되지 않습니다. 문의사항은 고객센터를 이용해 주세요.
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<hr style="margin: 20px 0 30px; opacity: 0.5" />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<img src="{site_url}/assets/images/common/layout/img_logo_gray.png" style="width: 160px; margin-bottom: 10px" />
+								<p style="font-size: 12px; margin: 0; padding: 0; color: #979797; line-height: 1.4">
+									<span>상호명 : 농협경제지주주식회사(축산경제) </span>&nbsp;&nbsp;&nbsp;<span>대표자 : 안병우</span><br />
+									사업자등록번호 : 845-85-00512
+									<a
+										href="www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=8458500512"
+										style="color: inherit; text-decoration: underline; padding: 0"
+										>[사업자정보확인]</a
+									>&nbsp;&gt; 사업장소재지 : (04516) 서울특별시 중구 새문안로 16 (충정로1가)
+									<span>&nbsp;통신판매업 신고번호 : 2017-서울중구-0503</span>&nbsp;&nbsp;&nbsp; 개인정보관리책임자 : 김칠석(<a
+										href="help@nhlyvly.com"
+										style="color: inherit; text-decoration: none; padding: 0"
+										>help@nhlyvly.com</a
+									>)
+								</p>
+								<p style="font-size: 12px; margin: 0; padding: 0; color: #979797; margin: 20px 0 60px">
+									Copyright &copy; 농협 LYVLY Co., LTD. All rights reserved.
+								</p>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<!-- <div id="update-account-information">update-account-information</div> -->
+				<!-- 임시비밀번호안내 -->
+				<div id="temporary-password">
+					<table
+						style="
+							display: table;
+							border-collapse: collapse;
+							border-spacing: 0;
+							width: 500px;
+							max-width: 500px;
+							margin: 0 auto;
+							letter-spacing: -0.5px;
+							word-break: keep-all;
+							font-family: Pretendard, Apple SD Gothic Neo, -apple-system, BlinkMacSystemFont, NanumBarunGothic, Malgun Gothic, 맑은 고딕, Dotum,
+								돋움, sans-serif;
+						">
+						<tr>
+							<td>
+								<img src="{site_url}/assets/images/common/layout/img_logo.png" alt="{site_name} " style="width: 230px; margin: 60px 0 20px" />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h2 style="font-size: 22px; font-weight: 800; text-align: center; margin: 40px; display: block">
+									회원 비밀번호가 변경되었습니다.
+								</h2>
+							</td>
+						</tr>
+						<tr>
+							<td style="text-align: center">임시 비밀번호를 발급 한 후에는 로그인 후 비밀번호를 한번 더 변경하세요. <br /><br /><br /></td>
+						</tr>
+						<tr>
+							<td
+								style="
+									display: block;
+									padding: 27px 44px;
+									background-color: #fafafa;
+									border-radius: 10px;
+									text-align: center;
+									line-height: 1.25;
+									font-size: 15px;
+									word-break: keep-all;
+								">
+								<p>{name} 고객님의 임시 비밀번호입니다.</p>
+								<strong style="font-size: 22px; font-weight: bold">{pwd}</strong>
+							</td>
+						</tr>
+
+						<tr>
+							<td>
+								<br /><br /><br />
+								<a
+									href="{site_url}"
+									style="
+										text-decoration: none;
+										background-color: #f02d40;
+										color: #ffffff;
+										width: 100%;
+										padding: 21px 0 20px;
+										text-align: center;
+										display: block;
+										border-radius: 10px;
+										font-size: 18px;
+										font-weight: 700;
+									"
+									>{site_name} 방문하기</a
+								><br /><br />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p style="font-size: 12px; margin: 0; padding: 0; line-height: 1.5; color: #757575; text-align: left">
+									·&nbsp;메일수신을 원하지 않는 경우, {site_name} 로그인 후 내 정보 관리에서 e-mail 수신여부를 변경해 주세요.
+								</p>
+								<p style="font-size: 12px; margin: 0; padding: 0; line-height: 1.5; color: #757575; text-align: left">
+									·&nbsp;본 메일은 발신전용으로 회신되지 않습니다. 문의사항은 고객센터를 이용해 주세요.
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<hr style="margin: 20px 0 30px; opacity: 0.5" />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<img src="{site_url}/assets/images/common/layout/img_logo_gray.png" style="width: 160px; margin-bottom: 10px" />
+								<p style="font-size: 12px; margin: 0; padding: 0; color: #979797; line-height: 1.4">
+									<span>상호명 : 농협경제지주주식회사(축산경제) </span>&nbsp;&nbsp;&nbsp;<span>대표자 : 안병우</span><br />
+									사업자등록번호 : 845-85-00512
+									<a
+										href="www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=8458500512"
+										style="color: inherit; text-decoration: underline; padding: 0"
+										>[사업자정보확인]</a
+									>&nbsp;&gt; 사업장소재지 : (04516) 서울특별시 중구 새문안로 16 (충정로1가)
+									<span>&nbsp;통신판매업 신고번호 : 2017-서울중구-0503</span>&nbsp;&nbsp;&nbsp; 개인정보관리책임자 : 김칠석(<a
+										href="help@nhlyvly.com"
+										style="color: inherit; text-decoration: none; padding: 0"
+										>help@nhlyvly.com</a
+									>)
+								</p>
+								<p style="font-size: 12px; margin: 0; padding: 0; color: #979797; margin: 20px 0 60px">
+									Copyright &copy; 농협 LYVLY Co., LTD. All rights reserved.
+								</p>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<!-- 문의답변 -->
+				<div id="inquiry-response">
+					<table
+						style="
+							display: table;
+							border-collapse: collapse;
+							border-spacing: 0;
+							width: 500px;
+							max-width: 500px;
+							margin: 0 auto;
+							letter-spacing: -0.5px;
+							font-family: Pretendard, Apple SD Gothic Neo, -apple-system, BlinkMacSystemFont, NanumBarunGothic, Malgun Gothic, 맑은 고딕, Dotum,
+								돋움, sans-serif;
+						">
+						<tr>
+							<td>
+								<img src="{site_url}/assets/images/common/layout/img_logo.png" alt="{site_name} " style="width: 230px; margin: 60px 0 20px" />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h2 style="font-size: 22px; font-weight: 800; text-align: center; margin: 40px; display: block">
+									문의 내용에 답변이 등록되었습니다.
+								</h2>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p style="font-size: 16px; font-weight: 700; text-align: left; margin: 40px 0 0">1:1 문의내용</p>
+								<table
+									style="
+										width: 100%;
+										border-collapse: 0;
+										border-top: 1px solid #eeeeee;
+										border-bottom: 1px solid #eeeeee;
+										font-size: 14px;
+										text-align: left;
+										margin-top: 20px;
+									">
+									<tr>
+										<th style="width: 114px; vertical-align: top; padding: 14px 15px; background-color: #fafafa">작성자</th>
+										<td style="vertical-align: top; padding: 14px 15px">{name}</td>
+										<th style="width: 114px; vertical-align: top; padding: 14px 15px; background-color: #fafafa">작성일</th>
+										<td style="vertical-align: top; padding: 14px 15px">{created_date}</td>
+									</tr>
+									<tr style="border-top: 1px solid #eeeeee">
+										<th style="width: 114px; vertical-align: top; padding: 14px 15px; background-color: #fafafa">이메일</th>
+										<td colspan="3" style="vertical-align: top; padding: 14px 15px">{email}</td>
+									</tr>
+									<tr style="border-top: 1px solid #eeeeee">
+										<th style="width: 114px; vertical-align: top; padding: 14px 15px; background-color: #fafafa">제목</th>
+										<td colspan="3" style="vertical-align: top; padding: 14px 15px">{subject}</td>
+									</tr>
+									<tr style="border-top: 1px solid #eeeeee">
+										<th style="width: 114px; vertical-align: top; padding: 14px 15px; background-color: #fafafa">문의내용</th>
+										<td colspan="3" style="vertical-align: top; padding: 14px 15px">{question}</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p style="font-size: 16px; font-weight: 700; text-align: left; margin: 40px 0 0">답변 내용</p>
+								<table
+									style="
+										width: 100%;
+										border-collapse: 0;
+										border-top: 1px solid #eeeeee;
+										border-bottom: 1px solid #eeeeee;
+										font-size: 14px;
+										text-align: left;
+										margin-top: 20px;
+									">
+									<tr>
+										<th style="width: 114px; vertical-align: top; padding: 14px 15px; background-color: #fafafa">작성일</th>
+										<td style="vertical-align: top; padding: 14px 15px">{answer_date}</td>
+									</tr>
+									<tr style="border-top: 1px solid #eeeeee">
+										<th style="width: 114px; vertical-align: top; padding: 14px 15px; background-color: #fafafa">답변제목</th>
+										<td style="vertical-align: top; padding: 14px 15px">{title}</td>
+									</tr>
+									<tr style="border-top: 1px solid #eeeeee">
+										<th style="width: 114px; vertical-align: top; padding: 14px 15px; background-color: #fafafa">답변내용</th>
+										<td style="vertical-align: top; padding: 14px 15px">{answer}</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<br />
+								<br />
+								<a
+									href="{site_url}"
+									style="
+										text-decoration: none;
+										background-color: #f02d40;
+										color: #ffffff;
+										width: 100%;
+										padding: 21px 0 20px;
+										text-align: center;
+										display: block;
+										border-radius: 10px;
+										font-size: 18px;
+										font-weight: 700;
+									"
+									>문의내역 보기</a
+								>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p style="font-size: 12px; margin: 0; padding: 0; line-height: 1.5; color: #757575; text-align: left; margin: 80px 0 0">
+									·&nbsp;메일수신을 원하지 않는 경우, {site_name} 로그인 후 내 정보 관리에서 e-mail 수신여부를 변경해 주세요.
+								</p>
+								<p style="font-size: 12px; margin: 0; padding: 0; line-height: 1.5; color: #757575; text-align: left">
+									·&nbsp;본 메일은 발신전용으로 회신되지 않습니다. 문의사항은 고객센터를 이용해 주세요.
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<hr style="margin: 20px 0 30px; opacity: 0.5" />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<img src="{site_url}/assets/images/common/layout/img_logo_gray.png" style="width: 130px" />
+								<p style="font-size: 12px; margin: 0; padding: 0; color: #979797; line-height: 1.4">
+									<span>상호명 : 농협경제지주주식회사(축산경제) </span>&nbsp;&nbsp;&nbsp;<span>대표자 : 안병우</span>
+								</p>
+								<p style="font-size: 12px; margin: 0; padding: 0; color: #979797; line-height: 1.25">
+									사업자등록번호 : 845-85-00512
+									<a
+										href="www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=8458500512"
+										style="color: inherit; text-decoration: underline; padding: 0"
+										>[사업자정보확인]</a
+									>&nbsp;&gt; 사업장소재지 : (04516) 서울특별시 <span>&nbsp;통신판매업 신고번호 : 2017-서울중구-0503</span>&nbsp;&nbsp;&nbsp;
+									개인정보관리책임자 : 김칠석(<a href="help@nhlyvly.com" style="color: inherit; text-decoration: none; padding: 0"
+										>help@nhlyvly.com</a
+									>)
+								</p>
+								<p style="font-size: 12px; margin: 0; padding: 0; color: #979797; margin: 20px 0 60px">
+									Copyright &copy; 농협 LYVLY Co., LTD. All rights reserved.
+								</p>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<!-- 입금대기 -->
+				<div id="payment-pending">
+					<table
+						style="
+							display: table;
+							border-collapse: collapse;
+							border-spacing: 0;
+							width: 500px;
+							max-width: 500px;
+							margin: 0 auto;
+							letter-spacing: -0.5px;
+							font-family: Pretendard, Apple SD Gothic Neo, -apple-system, BlinkMacSystemFont, NanumBarunGothic, Malgun Gothic, 맑은 고딕, Dotum,
+								돋움, sans-serif;
+						">
+						<tr>
+							<td>
+								<img src="{site_url}/assets/images/common/layout/img_logo.png" alt="{site_name} " style="width: 230px; margin: 60px 0 20px" />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h2 style="font-size: 22px; font-weight: 800; text-align: center; margin: 40px; display: block">
+									주문이 입금대기 중 상태입니다.
+								</h2>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<table
+									style="
+										border-collapse: 0;
+										border-spacing: 0;
+										background-color: #fafafa;
+										vertical-align: middle;
+										border-radius: 10px;
+										width: 100%;
+									">
+									<tr>
+										<td style="width: 33.3%; text-align: center; font-size: 14px; padding: 30px 20px 30px 20px">
+											주문번호 :
+											<strong style="font-size: 16px">{order_code}</strong>
+										</td>
+										<td style="width: 33.3%; text-align: center; font-size: 14px; padding: 30px 0">
+											주문일자 :
+											<strong style="font-size: 16px">{order_date}</strong>
+										</td>
+										<td style="width: 33.3%; text-align: center; font-size: 14px; padding: 30px 20px 30px 20px">
+											주문상태 :
+											<strong style="font-size: 16px; color: #4073ff">입금대기</strong>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p style="font-size: 16px; font-weight: 700; text-align: left; margin: 40px 0 0">주문상품 정보</p>
+								<!-- 아이템 영역 -->
+								<!-- <div style="width: 500px; overflow-y: auto">
+                                    <div style="display: table; width: 100%">
+                                        <div style="display: inline-block; width: 94px; height: 100%; padding-right: 14px; box-sizing: border-box">
+                                            <span
+                                                style="
+                                                    display: inline-block;
+                                                    width: 80px;
+                                                    height: 80px;
+                                                    border: 1px solid #eee;
+                                                    border-radius: 10px;
+                                                    overflow: hidden;
+                                                "
+                                            >
+                                                <img src="/pages/mailing/img_item_sample_01.png" style="width: 100%" />
+                                            </span>
+                                            <br />
+                                        </div>
+                                        <div style="display: inline-block; vertical-align: top; width: 406px">
+                                            <div style="margin-bottom: 12px; font-weight: bold">
+                                                <span
+                                                    style="
+                                                        display: inline-block;
+                                                        width: 44px;
+                                                        line-height: 20px;
+                                                        text-align: center;
+                                                        text-transform: uppercase;
+                                                        color: #fff;
+                                                        background-color: #f02d40;
+                                                        padding: 2px 6px;
+                                                        border-radius: 5px;
+                                                        letter-spacing: -0.03rem;
+                                                        font-weight: bold;
+                                                        font-size: 14px;
+                                                        margin-right: 6px;
+                                                    "
+                                                    >1++B</span
+                                                >
+                                                <span
+                                                    style="
+                                                        display: inline-block;
+                                                        width: 44px;
+                                                        line-height: 20px;
+                                                        text-align: center;
+                                                        text-transform: uppercase;
+                                                        color: #fff;
+                                                        background-color: #f4650e;
+                                                        padding: 2px 6px;
+                                                        border-radius: 5px;
+                                                        letter-spacing: -0.03rem;
+                                                        font-weight: bold;
+                                                        font-size: 14px;
+                                                        margin-right: 6px;
+                                                    "
+                                                    >NO.9</span
+                                                >
+                                                <span
+                                                    style="
+                                                        display: inline-flex;
+                                                        align-items: center;
+                                                        line-height: 20px;
+                                                        vertical-align: middle;
+                                                        margin-right: 6px;
+                                                        color: #2173d8;
+                                                    "
+                                                >
+                                                    <img src="/pages/mailing/ico_ice.svg" alt="냉동" style="display: inline-block; height: 20px" />
+                                                    냉동</span
+                                                >
+                                                <span
+                                                    style="
+                                                        display: inline-flex;
+                                                        align-items: center;
+                                                        line-height: 20px;
+                                                        vertical-align: middle;
+                                                        margin-right: 6px;
+                                                        color: #1cacb1;
+                                                    "
+                                                >
+                                                    <img src="/pages/mailing/ico_cold.svg" alt="냉장" style="display: inline-block; height: 20px" />
+                                                    냉장</span
+                                                >
+                                                <span
+                                                    style="
+                                                        display: inline-block;
+                                                        line-height: 20px;
+                                                        vertical-align: middle;
+                                                        font-size: 15px;
+                                                        color: #4ea545;
+                                                        margin-right: 6px;
+                                                    "
+                                                    >무항생제</span
+                                                >
+                                                <span
+                                                    style="
+                                                        display: inline-flex;
+                                                        align-items: center;
+                                                        line-height: 20px;
+                                                        vertical-align: middle;
+                                                        font-size: 15px;
+                                                        color: #2379ca;
+                                                        margin-right: 6px;
+                                                    "
+                                                >
+                                                    <img src="/pages/mailing/ico_fresh.png" alt="신선물류" style="display: inline-block; height: 20px" />
+                                                    신선물류</span
+                                                >
+                                            </div>
+                                            <em style="display: block; font-style: normal; font-size: 16px">브랜드명</em>
+                                            <strong style="display: block; font-size: 20px">제목줄이 나오는 영역입니다</strong>
+                                            <p style="margin: 6px 0 0 0; font-size: 12px; color: #979797">윗등심 + 아랫등심 반두분</p>
+                                            <p style="margin: 6px 0 14px 0; font-size: 14px"><strong>가공일자 2023-06-28</strong>(29개월령)</p>
+                                            <hr style="background-color: #eee; border: 0; height: 1px" />
+                                            <strong style="display: block; font-size: 20px; font-weight: bold; margin: 0 0 10px">5.4kg</strong>
+                                            <table>
+                                                <tr style="font-size: 14px; font-weight: bold">
+                                                    <td style="padding-right: 15px; color: #f02d40">단가(kg당)</td>
+                                                    <td style="color: #4073ff">판매가</td>
+                                                </tr>
+                                                <tr>
+                                                    <td
+                                                        style="
+                                                            padding-right: 15px;
+                                                            font-size: 1.3rem;
+                                                            letter-spacing: -0.08rem;
+                                                            font-weight: bold;
+                                                            color: #f02d40;
+                                                        "
+                                                    >
+                                                        <span style="font-size: 24px">47,700</span>원
+                                                    </td>
+                                                    <td style="font-size: 1.3rem; letter-spacing: -0.08rem; font-weight: bold">
+                                                        <span style="font-size: 24px">472,824</span>원
+                                                    </td>
+                                                </tr>
+                                                <tr style="text-decoration: line-through; color: #979797; font-size: 13px">
+                                                    <td style="padding-right: 15px">39,800원(kg당)</td>
+                                                    <td>39,800원</td>
+                                                </tr>
+                                            </table>
+                                            <div style="margin: 14px 0 0">
+                                                <span style="display: inline-flex; align-items: center; font-size: 1.3rem; font-weight: bold"
+                                                    ><span style="color: #ff2328">적립혜택</span
+                                                    ><img src="/pages/mailing/ico_point.png" style="width: 13px; margin: 0 2px"
+                                                /></span>
+                                                <span style="display: inline-flex; align-items: center; font-size: 1.3rem; font-weight: bold"
+                                                    ><span style="color: #602ff0">즉시할인</span
+                                                    ><img src="/pages/mailing/ico_coupon.png" style="width: 13px; margin: 0 2px"
+                                                /></span>
+                                                <span style="display: inline-flex; align-items: center; font-size: 1.3rem; font-weight: bold"
+                                                    ><span style="color: #000000">숙성할인</span
+                                                    ><img src="/pages/mailing/ico_aging.png" style="width: 13px; margin: 0 2px"
+                                                /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr style="background-color: #eee; border: 0; height: 1px; margin: 20px 0" />
+                                </div> -->
+								<!-- //아이템 영역 -->
+								<!-- 20230918 아이템영역 -->
+								<div>
+									<div style="display: block">
+										<div style="display: block; padding: 20px 0; border-bottom: 1px solid #eee">
+											<em style="display: block; font-style: normal; font-size: 16px">[브랜드명] 냉장/등급/지방등급/무항생제/신선물류</em>
+											<strong style="display: block; font-size: 22px">제목줄이 노출되는 영역입니다</strong>
+											<span style="display: block; margin: 6px 0 0; font-size: 1.3rem; color: #979797"
+												>윗등심 + 아랫등심 반두분 옵션이 노출되는 영역입니다</span
+											>
+											<div style="display: block; margin: 20px 0 0; line-height: 20px">
+												<div style="display: inline-block; width: 49.5%">
+													<strong style="display: inline-block; font-size: 18px; font-weight: bold">15.4kg/11개</strong>
+													<span style="display: inline-block; padding-left: 18px; font-size: 16px">배송비 2,500원</span>
+												</div>
+												<span style="display: inline-block; width: 49.5%; text-align: right; font-size: 18px">2,000,000원</span>
+											</div>
+										</div>
+										<div style="display: block; padding: 20px 0; border-bottom: 1px solid #eee">
+											<em style="display: block; font-style: normal; font-size: 16px">[브랜드명] 냉장/등급/지방등급/무항생제/신선물류</em>
+											<strong style="display: block; font-size: 22px">제목줄이 노출되는 영역입니다</strong>
+											<span style="display: block; margin: 6px 0 0; font-size: 1.3rem; color: #979797"
+												>윗등심 + 아랫등심 반두분 옵션이 노출되는 영역입니다</span
+											>
+											<div style="display: block; margin: 20px 0 0; line-height: 20px">
+												<div style="display: inline-block; width: 49.5%">
+													<strong style="display: inline-block; font-size: 18px; font-weight: bold">15.4kg/11개</strong>
+													<span style="display: inline-block; padding-left: 18px; font-size: 16px">배송비 2,500원</span>
+												</div>
+												<span style="display: inline-block; width: 49.5%; text-align: right; font-size: 18px">2,000,000원</span>
+											</div>
+										</div>
+									</div>
+									<!-- //20230918 아이템영역 -->
+									<table
+										style="
+											width: 100%;
+											border-collapse: 0;
+											border-top: 1px solid #eeeeee;
+											border-bottom: 1px solid #eeeeee;
+											font-size: 14px;
+											text-align: left;
+											margin-top: 20px;
+										">
+										<tr>
+											<th style="vertical-align: top; padding: 14px 15px; background-color: #fafafa">받는사람</th>
+											<td style="vertical-align: top; padding: 14px 15px">
+												<p style="margin: 0; padding: 0; line-height: 1.2">{name}</p>
+												<p style="margin: 0; padding: 0; line-height: 1.2">{user_address}</p>
+												<p style="margin: 0; padding: 0; line-height: 1.2">{user_homePhone}/{user_cellPhone}</p>
+											</td>
+										</tr>
+									</table>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p style="font-size: 16px; font-weight: 700; text-align: left; margin: 40px 0 0">입금은행 정보</p>
+								<table
+									style="
+										width: 100%;
+										border-collapse: 0;
+										border-top: 1px solid #eeeeee;
+										border-bottom: 1px solid #eeeeee;
+										font-size: 14px;
+										text-align: left;
+										margin-top: 20px;
+									">
+									<tr>
+										<th style="width: 114px; vertical-align: top; padding: 14px 15px; background-color: #fafafa">입금은행정보</th>
+										<td style="vertical-align: top; padding: 14px 15px">{bank_virtual_no}</td>
+									</tr>
+									<tr style="border-top: 1px solid #eeeeee">
+										<th style="width: 114px; vertical-align: top; padding: 14px 15px; background-color: #fafafa">입금예정금액</th>
+										<td style="vertical-align: top; padding: 14px 15px">{bank_amount}</td>
+									</tr>
+									<tr style="border-top: 1px solid #eeeeee">
+										<th style="width: 114px; vertical-align: top; padding: 14px 15px; background-color: #fafafa">입금자명</th>
+										<td style="vertical-align: top; padding: 14px 15px">{bank_in_name}</td>
+									</tr>
+									<tr style="border-top: 1px solid #eeeeee">
+										<th style="width: 114px; vertical-align: top; padding: 14px 15px; background-color: #fafafa">입금기한</th>
+										<td style="vertical-align: top; padding: 14px 15px">{bank_date}</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<br />
+								<br />
+								<a
+									href="{site_url}"
+									style="
+										text-decoration: none;
+										background-color: #f02d40;
+										color: #ffffff;
+										width: 100%;
+										padding: 21px 0 20px;
+										text-align: center;
+										display: block;
+										border-radius: 10px;
+										font-size: 18px;
+										font-weight: 700;
+									"
+									>주문/배송 조회</a
+								>
+								<br /><br /><br />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p style="font-size: 12px; margin: 0; padding: 0; line-height: 1.5; color: #757575; text-align: left">
+									·&nbsp;본 메일은 발신전용으로 회신되지 않습니다. 문의사항은 고객센터를 이용해 주세요.
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<hr style="margin: 20px 0 30px; opacity: 0.5" />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<img src="{site_url}/assets/images/common/layout/img_logo_gray.png" style="width: 130px" />
+								<p style="font-size: 12px; margin: 0; padding: 0; color: #979797; line-height: 1.4">
+									<span>상호명 : 농협경제지주주식회사(축산경제) </span>&nbsp;&nbsp;&nbsp;<span>대표자 : 안병우</span>
+								</p>
+								<p style="font-size: 12px; margin: 0; padding: 0; color: #979797; line-height: 1.25">
+									사업자등록번호 : 845-85-00512
+									<a
+										href="www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=8458500512"
+										style="color: inherit; text-decoration: underline; padding: 0"
+										>[사업자정보확인]</a
+									>&nbsp;&gt; 사업장소재지 : (04516) 서울특별시 <span>&nbsp;통신판매업 신고번호 : 2017-서울중구-0503</span>&nbsp;&nbsp;&nbsp;
+									개인정보관리책임자 : 김칠석(<a href="help@nhlyvly.com" style="color: inherit; text-decoration: none; padding: 0"
+										>help@nhlyvly.com</a
+									>)
+								</p>
+								<p style="font-size: 12px; margin: 0; padding: 0; color: #979797; margin: 20px 0 60px">
+									Copyright &copy; 농협 LYVLY Co., LTD. All rights reserved.
+								</p>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<!-- // -->
+				<!-- <div>
+                    <span
+                        style="
+                            display: inline-block;
+                            width: 44px;
+                            line-height: 20px;
+                            text-align: center;
+                            text-transform: uppercase;
+                            color: #fff;
+                            background-color: #f4650e;
+                            padding: 2px 6px;
+                            border-radius: 5px;
+                            letter-spacing: -0.03rem;
+                            font-weight: bold;
+                            font-size: 14px;
+                            margin-right: 6px;
+                        "
+                        >NO.9</span
+                    >
+                    <span
+                        style="
+                            display: inline-block;
+                            width: 44px;
+                            line-height: 20px;
+                            text-align: center;
+                            text-transform: uppercase;
+                            color: #fff;
+                            background-color: #f4900e;
+                            padding: 2px 6px;
+                            border-radius: 5px;
+                            letter-spacing: -0.03rem;
+                            font-weight: bold;
+                            font-size: 14px;
+                            margin-right: 6px;
+                        "
+                        >NO.8</span
+                    >
+                    <span
+                        style="
+                            display: inline-block;
+                            width: 44px;
+                            line-height: 20px;
+                            text-align: center;
+                            text-transform: uppercase;
+                            color: #fff;
+                            background-color: #f0b411;
+                            padding: 2px 6px;
+                            border-radius: 5px;
+                            letter-spacing: -0.03rem;
+                            font-weight: bold;
+                            font-size: 14px;
+                            margin-right: 6px;
+                        "
+                        >NO.7</span
+                    >
+                    <span
+                        style="
+                            display: inline-block;
+                            width: 44px;
+                            line-height: 20px;
+                            text-align: center;
+                            text-transform: uppercase;
+                            color: #fff;
+                            background-color: #0d9bac;
+                            padding: 2px 6px;
+                            border-radius: 5px;
+                            letter-spacing: -0.03rem;
+                            font-weight: bold;
+                            font-size: 14px;
+                            margin-right: 6px;
+                        "
+                        >NO.6</span
+                    >
+                    <span
+                        style="
+                            display: inline-block;
+                            width: 44px;
+                            line-height: 20px;
+                            text-align: center;
+                            text-transform: uppercase;
+                            color: #fff;
+                            background-color: #3ea289;
+                            padding: 2px 6px;
+                            border-radius: 5px;
+                            letter-spacing: -0.03rem;
+                            font-weight: bold;
+                            font-size: 14px;
+                            margin-right: 6px;
+                        "
+                        >NO.5</span
+                    >
+                    <span
+                        style="
+                            display: inline-block;
+                            width: 44px;
+                            line-height: 20px;
+                            text-align: center;
+                            text-transform: uppercase;
+                            color: #fff;
+                            background-color: #3c6dd1;
+                            padding: 2px 6px;
+                            border-radius: 5px;
+                            letter-spacing: -0.03rem;
+                            font-weight: bold;
+                            font-size: 14px;
+                            margin-right: 6px;
+                        "
+                        >NO.4</span
+                    >
+                    <span
+                        style="
+                            display: inline-block;
+                            width: 44px;
+                            line-height: 20px;
+                            text-align: center;
+                            text-transform: uppercase;
+                            color: #fff;
+                            background-color: #813ecc;
+                            padding: 2px 6px;
+                            border-radius: 5px;
+                            letter-spacing: -0.03rem;
+                            font-weight: bold;
+                            font-size: 14px;
+                            margin-right: 6px;
+                        "
+                        >NO.3</span
+                    >
+                    <span
+                        style="
+                            display: inline-block;
+                            width: 44px;
+                            line-height: 20px;
+                            text-align: center;
+                            text-transform: uppercase;
+                            color: #fff;
+                            background-color: #ce509d;
+                            padding: 2px 6px;
+                            border-radius: 5px;
+                            letter-spacing: -0.03rem;
+                            font-weight: bold;
+                            font-size: 14px;
+                            margin-right: 6px;
+                        "
+                        >NO.2</span
+                    >
+                    <span
+                        style="
+                            display: inline-block;
+                            width: 44px;
+                            line-height: 20px;
+                            text-align: center;
+                            text-transform: uppercase;
+                            color: #fff;
+                            background-color: #9d522d;
+                            padding: 2px 6px;
+                            border-radius: 5px;
+                            letter-spacing: -0.03rem;
+                            font-weight: bold;
+                            font-size: 14px;
+                            margin-right: 6px;
+                        "
+                        >NO.1</span
+                    >
+                </div> -->
+				<!-- // -->
+
+				<!-- 결제완료 -->
+				<div id="payment-completed">
+					<table
+						style="
+							display: table;
+							border-collapse: collapse;
+							border-spacing: 0;
+							width: 500px;
+							max-width: 500px;
+							margin: 0 auto;
+							letter-spacing: -0.5px;
+							font-family: Pretendard, Apple SD Gothic Neo, -apple-system, BlinkMacSystemFont, NanumBarunGothic, Malgun Gothic, 맑은 고딕, Dotum,
+								돋움, sans-serif;
+						">
+						<tr>
+							<td>
+								<img src="{site_url}/assets/images/common/layout/img_logo.png" alt="{site_name} " style="width: 230px; margin: 60px 0 20px" />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h2 style="font-size: 22px; font-weight: 800; text-align: center; margin: 40px; display: block">
+									주문이 정상적으로 결제되었습니다.
+								</h2>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<table
+									style="
+										width: 100%;
+										border-collapse: 0;
+										border-spacing: 0;
+										background-color: #fafafa;
+										vertical-align: middle;
+										border-radius: 10px;
+									">
+									<tr>
+										<td style="width: 33.3%; text-align: center; font-size: 14px; padding: 30px 20px 30px 20px">
+											주문번호 :
+											<strong style="font-size: 16px">{order_code}</strong>
+										</td>
+										<td style="width: 33.3%; text-align: center; font-size: 14px; padding: 30px 0">
+											주문일자 :
+											<strong style="font-size: 16px">{order_date}</strong>
+										</td>
+										<td style="width: 33.3%; text-align: center; font-size: 14px; padding: 30px 20px 30px 20px">
+											주문상태 :
+											<strong style="font-size: 16px; color: #4073ff">결제완료</strong>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p style="font-size: 16px; font-weight: 700; text-align: left; margin: 40px 0 0">주문상품 정보</p>
+								<!-- 23/09/18 아이템 영역 -->
+								<div style="display: block; padding: 20px 0; border-bottom: 1px solid #eee">
+									<em style="display: block; font-style: normal; font-size: 16px">[브랜드명] 냉장/등급/지방등급/무항생제/신선물류</em>
+									<strong style="display: block; font-size: 22px">제목줄이 노출되는 영역입니다</strong>
+									<span style="display: block; margin: 6px 0 0; font-size: 1.3rem; color: #979797"
+										>윗등심 + 아랫등심 반두분 옵션이 노출되는 영역입니다</span
+									>
+									<div style="display: block; margin: 20px 0 0; line-height: 20px">
+										<div style="display: inline-block; width: 49.5%">
+											<strong style="display: inline-block; font-size: 18px; font-weight: bold">15.4kg/11개</strong>
+											<span style="display: inline-block; padding-left: 18px; font-size: 16px">배송비 2,500원</span>
+										</div>
+										<span style="display: inline-block; width: 49.5%; text-align: right; font-size: 18px">2,000,000원</span>
+									</div>
+								</div>
+								<div style="display: block; padding: 20px 0; border-bottom: 1px solid #eee">
+									<em style="display: block; font-style: normal; font-size: 16px">[브랜드명] 냉장/등급/지방등급/무항생제/신선물류</em>
+									<strong style="display: block; font-size: 22px">제목줄이 노출되는 영역입니다</strong>
+									<span style="display: block; margin: 6px 0 0; font-size: 1.3rem; color: #979797"
+										>윗등심 + 아랫등심 반두분 옵션이 노출되는 영역입니다</span
+									>
+									<div style="display: block; margin: 20px 0 0; line-height: 20px">
+										<div style="display: inline-block; width: 49.5%">
+											<strong style="display: inline-block; font-size: 18px; font-weight: bold">15.4kg/11개</strong>
+											<span style="display: inline-block; padding-left: 18px; font-size: 16px">배송비 2,500원</span>
+										</div>
+										<span style="display: inline-block; width: 49.5%; text-align: right; font-size: 18px">2,000,000원</span>
+									</div>
+								</div>
+								<!-- //23/09/18 아이템 영역 -->
+								<!-- 아이템 영역 -->
+								<!-- <div style="width: 500px; overflow-y: auto">
+                                    <div style="display: table; width: 100%">
+                                        <div style="display: inline-block; width: 94px; height: 100%; padding-right: 14px; box-sizing: border-box">
+                                            <span
+                                                style="
+                                                    display: inline-block;
+                                                    width: 80px;
+                                                    height: 80px;
+                                                    border: 1px solid #eee;
+                                                    border-radius: 10px;
+                                                    overflow: hidden;
+                                                "
+                                            >
+                                                <img src="/pages/mailing/img_item_sample_01.png" style="width: 100%" />
+                                            </span>
+                                            <br />
+                                        </div>
+                                        <div style="display: inline-block; vertical-align: top; width: 406px">
+                                            <div style="margin-bottom: 12px; font-weight: bold">
+                                                <span
+                                                    style="
+                                                        display: inline-block;
+                                                        width: 44px;
+                                                        line-height: 20px;
+                                                        text-align: center;
+                                                        text-transform: uppercase;
+                                                        color: #fff;
+                                                        background-color: #f02d40;
+                                                        padding: 2px 6px;
+                                                        border-radius: 5px;
+                                                        letter-spacing: -0.03rem;
+                                                        font-weight: bold;
+                                                        font-size: 14px;
+                                                        margin-right: 6px;
+                                                    "
+                                                    >1++B</span
+                                                >
+                                                <span
+                                                    style="
+                                                        display: inline-block;
+                                                        width: 44px;
+                                                        line-height: 20px;
+                                                        text-align: center;
+                                                        text-transform: uppercase;
+                                                        color: #fff;
+                                                        background-color: #f4650e;
+                                                        padding: 2px 6px;
+                                                        border-radius: 5px;
+                                                        letter-spacing: -0.03rem;
+                                                        font-weight: bold;
+                                                        font-size: 14px;
+                                                        margin-right: 6px;
+                                                    "
+                                                    >NO.9</span
+                                                >
+                                                <span
+                                                    style="
+                                                        display: inline-flex;
+                                                        align-items: center;
+                                                        line-height: 20px;
+                                                        vertical-align: middle;
+                                                        margin-right: 6px;
+                                                        color: #2173d8;
+                                                    "
+                                                >
+                                                    <img src="/pages/mailing/ico_ice.svg" alt="냉동" style="display: inline-block; height: 20px" />
+                                                    냉동</span
+                                                >
+                                                <span
+                                                    style="
+                                                        display: inline-flex;
+                                                        align-items: center;
+                                                        line-height: 20px;
+                                                        vertical-align: middle;
+                                                        margin-right: 6px;
+                                                        color: #1cacb1;
+                                                    "
+                                                >
+                                                    <img src="/pages/mailing/ico_cold.svg" alt="냉장" style="display: inline-block; height: 20px" />
+                                                    냉장</span
+                                                >
+                                                <span
+                                                    style="
+                                                        display: inline-block;
+                                                        line-height: 20px;
+                                                        vertical-align: middle;
+                                                        font-size: 15px;
+                                                        color: #4ea545;
+                                                        margin-right: 6px;
+                                                    "
+                                                    >무항생제</span
+                                                >
+                                                <span
+                                                    style="
+                                                        display: inline-flex;
+                                                        align-items: center;
+                                                        line-height: 20px;
+                                                        vertical-align: middle;
+                                                        font-size: 15px;
+                                                        color: #2379ca;
+                                                        margin-right: 6px;
+                                                    "
+                                                >
+                                                    <img src="/pages/mailing/ico_fresh.png" alt="신선물류" style="display: inline-block; height: 20px" />
+                                                    신선물류</span
+                                                >
+                                            </div>
+                                            <em style="display: block; font-style: normal; font-size: 16px">브랜드명</em>
+                                            <strong style="display: block; font-size: 20px">제목줄이 나오는 영역입니다</strong>
+                                            <p style="margin: 6px 0 0 0; font-size: 12px; color: #979797">윗등심 + 아랫등심 반두분</p>
+                                            <p style="margin: 6px 0 14px 0; font-size: 14px"><strong>가공일자 2023-06-28</strong>(29개월령)</p>
+                                            <hr style="background-color: #eee; border: 0; height: 1px" />
+                                            <strong style="display: block; font-size: 20px; font-weight: bold; margin: 0 0 10px">5.4kg</strong>
+                                            <table>
+                                                <tr style="font-size: 14px; font-weight: bold">
+                                                    <td style="padding-right: 15px; color: #f02d40">
+                                                        <span
+                                                            style="
+                                                                padding: 2px 4px;
+                                                                line-height: 20px;
+                                                                font-size: 12px;
+                                                                font-weight: 400;
+                                                                border: 1px solid #f02d40;
+                                                                background-color: #fff4f8;
+                                                                border-radius: 2px;
+                                                            "
+                                                        >
+                                                            최대 혜택가 10%↓
+                                                        </span>
+                                                    </td>
+                                                    <td style="color: #4073ff">
+                                                        <span
+                                                            style="
+                                                                padding: 2px 4px;
+                                                                line-height: 20px;
+                                                                font-size: 12px;
+                                                                font-weight: 400;
+                                                                border: 1px solid #4073ff;
+                                                                background-color: #f5f6ff;
+                                                                border-radius: 2px;
+                                                            "
+                                                        >
+                                                            최대 혜택가 10%↓
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td
+                                                        style="
+                                                            padding-right: 15px;
+                                                            font-size: 1.3rem;
+                                                            letter-spacing: -0.08rem;
+                                                            font-weight: bold;
+                                                            color: #f02d40;
+                                                        "
+                                                    >
+                                                        <span style="font-size: 24px">47,700</span>원
+                                                    </td>
+                                                    <td style="font-size: 1.3rem; letter-spacing: -0.08rem; font-weight: bold">
+                                                        <span style="font-size: 24px">472,824</span>원
+                                                    </td>
+                                                </tr>
+                                                <tr style="text-decoration: line-through; color: #979797; font-size: 13px">
+                                                    <td style="padding-right: 15px">39,800원(kg당)</td>
+                                                    <td>39,800원</td>
+                                                </tr>
+                                            </table>
+                                            <div style="margin: 14px 0 0">
+                                                <span style="display: inline-flex; align-items: center; font-size: 1.3rem; font-weight: bold"
+                                                    ><span style="color: #ff2328">적립혜택</span
+                                                    ><img src="/pages/mailing/ico_point.png" style="width: 13px; margin: 0 2px"
+                                                /></span>
+                                                <span style="display: inline-flex; align-items: center; font-size: 1.3rem; font-weight: bold"
+                                                    ><span style="color: #602ff0">즉시할인</span
+                                                    ><img src="/pages/mailing/ico_coupon.png" style="width: 13px; margin: 0 2px"
+                                                /></span>
+                                                <span style="display: inline-flex; align-items: center; font-size: 1.3rem; font-weight: bold"
+                                                    ><span style="color: #000000">숙성할인</span
+                                                    ><img src="/pages/mailing/ico_aging.png" style="width: 13px; margin: 0 2px"
+                                                /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr style="background-color: #eee; border: 0; height: 1px; margin: 20px 0" />
+                                </div> -->
+								<!-- //아이템 영역 -->
+
+								<table
+									style="
+										width: 100%;
+										border-collapse: 0;
+										border-top: 1px solid #eeeeee;
+										border-bottom: 1px solid #eeeeee;
+										font-size: 14px;
+										text-align: left;
+										margin-top: 20px;
+									">
+									<tr>
+										<th style="vertical-align: top; padding: 14px 15px; background-color: #fafafa">받는사람</th>
+										<td style="vertical-align: top; padding: 14px 15px">
+											<p style="margin: 0; padding: 0; line-height: 1.2">{name}</p>
+											<p style="margin: 0; padding: 0; line-height: 1.2">{user_address}</p>
+											<p style="margin: 0; padding: 0; line-height: 1.2">
+												<!-- 둘 중 하나 노출 -->
+												{user_homePhone}/{user_cellPhone}
+											</p>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p style="font-size: 16px; font-weight: 700; text-align: left; margin: 40px 0 0">결제내역</p>
+								<!-- {order_item_payment} -->
+								<table
+									style="
+										width: 100%;
+										border-collapse: 0;
+										border-top: 1px solid #eeeeee;
+										border-bottom: 1px solid #eeeeee;
+										font-size: 14px;
+										text-align: left;
+										margin-top: 20px;
+									">
+									<tr>
+										<th style="width: 114px; vertical-align: top; padding: 14px 15px; background-color: #fafafa">결제방식</th>
+										<td style="vertical-align: top; padding: 14px 15px">{order.way}</td>
+									</tr>
+									<tr style="border-top: 1px solid #eeeeee">
+										<th style="width: 114px; vertical-align: top; padding: 14px 15px; background-color: #fafafa">결제금액</th>
+										<td style="vertical-align: top; padding: 14px 15px">{order.price}</td>
+									</tr>
+									<tr style="border-top: 1px solid #eeeeee">
+										<th style="width: 114px; vertical-align: top; padding: 14px 15px; background-color: #fafafa">결제상태</th>
+										<td style="vertical-align: top; padding: 14px 15px">{order.status}</td>
+									</tr>
+									<tr style="border-top: 1px solid #eeeeee">
+										<th style="width: 114px; vertical-align: top; padding: 14px 15px; background-color: #fafafa">결제일</th>
+										<td style="vertical-align: top; padding: 14px 15px">{order.date}</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<br />
+								<br />
+								<a
+									href="{site_url}"
+									style="
+										text-decoration: none;
+										background-color: #f02d40;
+										color: #ffffff;
+										width: 100%;
+										padding: 21px 0 20px;
+										text-align: center;
+										display: block;
+										border-radius: 10px;
+										font-size: 18px;
+										font-weight: 700;
+									"
+									>주문/배송 조회</a
+								><br /><br /><br />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p style="font-size: 12px; margin: 0; padding: 0; line-height: 1.5; color: #757575; text-align: left">
+									·&nbsp;본 메일은 발신전용으로 회신되지 않습니다. 문의사항은 고객센터를 이용해 주세요.
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<hr style="margin: 20px 0 30px; opacity: 0.5" />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<img src="{site_url}/assets/images/common/layout/img_logo_gray.png" style="width: 130px" />
+								<p style="font-size: 12px; margin: 0; padding: 0; color: #979797; line-height: 1.4">
+									<span>상호명 : 농협경제지주주식회사(축산경제) </span>&nbsp;&nbsp;&nbsp;<span>대표자 : 안병우</span>
+								</p>
+								<p style="font-size: 12px; margin: 0; padding: 0; color: #979797; line-height: 1.25">
+									사업자등록번호 : 845-85-00512
+									<a
+										href="www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=8458500512"
+										style="color: inherit; text-decoration: underline; padding: 0"
+										>[사업자정보확인]</a
+									>&nbsp;&gt; 사업장소재지 : (04516) 서울특별시 <span>&nbsp;통신판매업 신고번호 : 2017-서울중구-0503</span>&nbsp;&nbsp;&nbsp;
+									개인정보관리책임자 : 김칠석(<a href="help@nhlyvly.com" style="color: inherit; text-decoration: none; padding: 0"
+										>help@nhlyvly.com</a
+									>)
+								</p>
+								<p style="font-size: 12px; margin: 0; padding: 0; color: #979797; margin: 20px 0 60px">
+									Copyright &copy; 농협 LYVLY Co., LTD. All rights reserved.
+								</p>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<!-- 배송중 -->
+				<div id="delivery-start">
+					<table
+						style="
+							display: table;
+							border-collapse: collapse;
+							border-spacing: 0;
+							width: 500px;
+							max-width: 500px;
+							margin: 0 auto;
+							letter-spacing: -0.5px;
+							font-family: Pretendard, Apple SD Gothic Neo, -apple-system, BlinkMacSystemFont, NanumBarunGothic, Malgun Gothic, 맑은 고딕, Dotum,
+								돋움, sans-serif;
+						">
+						<tr>
+							<td>
+								<img src="{site_url}/assets/images/common/layout/img_logo.png" alt="{site_name} " style="width: 230px; margin: 60px 0 20px" />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h2 style="font-size: 22px; font-weight: 800; text-align: center; margin: 40px; display: block">
+									주문한 상품이 정상적으로 발송되었습니다.
+								</h2>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<table
+									style="
+										width: 100%;
+										border-collapse: 0;
+										border-spacing: 0;
+										background-color: #fafafa;
+										vertical-align: middle;
+										border-radius: 10px;
+									">
+									<tr>
+										<td style="width: 33.3%; text-align: center; font-size: 14px; padding: 30px 20px 30px 20px">
+											주문번호 :
+											<strong style="font-size: 16px">{order_code}</strong>
+										</td>
+										<td style="width: 33.3%; text-align: center; font-size: 14px; padding: 30px 0">
+											주문일자 :
+											<strong style="font-size: 16px">{order_date}</strong>
+										</td>
+										<td style="width: 33.3%; text-align: center; font-size: 14px; padding: 30px 20px 30px 20px">
+											주문상태 :
+											<strong style="font-size: 16px; color: #4073ff">배송 중</strong>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p style="font-size: 16px; font-weight: 700; text-align: left; margin: 40px 0 0">주문상품 정보</p>
+								<!-- 23/09/18 아이템 영역 -->
+								<div style="display: block; padding: 20px 0; border-bottom: 1px solid #eee">
+									<em style="display: block; font-style: normal; font-size: 16px">[브랜드명] 냉장/등급/지방등급/무항생제/신선물류</em>
+									<strong style="display: block; font-size: 22px">제목줄이 노출되는 영역입니다</strong>
+									<span style="display: block; margin: 6px 0 0; font-size: 1.3rem; color: #979797"
+										>윗등심 + 아랫등심 반두분 옵션이 노출되는 영역입니다</span
+									>
+									<div style="display: block; margin: 20px 0 0; line-height: 20px">
+										<div style="display: inline-block; width: 49.5%">
+											<strong style="display: inline-block; font-size: 18px; font-weight: bold">15.4kg/11개</strong>
+											<span style="display: inline-block; padding-left: 18px; font-size: 16px">배송비 2,500원</span>
+										</div>
+										<span style="display: inline-block; width: 49.5%; text-align: right; font-size: 18px">2,000,000원</span>
+									</div>
+								</div>
+								<div style="display: block; padding: 20px 0; border-bottom: 1px solid #eee">
+									<em style="display: block; font-style: normal; font-size: 16px">[브랜드명] 냉장/등급/지방등급/무항생제/신선물류</em>
+									<strong style="display: block; font-size: 22px">제목줄이 노출되는 영역입니다</strong>
+									<span style="display: block; margin: 6px 0 0; font-size: 1.3rem; color: #979797"
+										>윗등심 + 아랫등심 반두분 옵션이 노출되는 영역입니다</span
+									>
+									<div style="display: block; margin: 20px 0 0; line-height: 20px">
+										<div style="display: inline-block; width: 49.5%">
+											<strong style="display: inline-block; font-size: 18px; font-weight: bold">15.4kg/11개</strong>
+											<span style="display: inline-block; padding-left: 18px; font-size: 16px">배송비 2,500원</span>
+										</div>
+										<span style="display: inline-block; width: 49.5%; text-align: right; font-size: 18px">2,000,000원</span>
+									</div>
+								</div>
+								<!-- // 23/09/18 아이템 영역 -->
+								<!-- 아이템 영역 -->
+								<!-- <div style="width: 500px; overflow-y: auto">
+                                    <div style="display: table; width: 100%">
+                                        <div style="display: inline-block; width: 94px; height: 100%; padding-right: 14px; box-sizing: border-box">
+                                            <span
+                                                style="
+                                                    display: inline-block;
+                                                    width: 80px;
+                                                    height: 80px;
+                                                    border: 1px solid #eee;
+                                                    border-radius: 10px;
+                                                    overflow: hidden;
+                                                "
+                                            >
+                                                <img src="/pages/mailing/img_item_sample_01.png" style="width: 100%" />
+                                            </span>
+                                            <br />
+                                        </div>
+                                        <div style="display: inline-block; vertical-align: top; width: 406px">
+                                            <div style="margin-bottom: 12px; font-weight: bold">
+                                                <span
+                                                    style="
+                                                        display: inline-block;
+                                                        width: 44px;
+                                                        line-height: 20px;
+                                                        text-align: center;
+                                                        text-transform: uppercase;
+                                                        color: #fff;
+                                                        background-color: #f02d40;
+                                                        padding: 2px 6px;
+                                                        border-radius: 5px;
+                                                        letter-spacing: -0.03rem;
+                                                        font-weight: bold;
+                                                        font-size: 14px;
+                                                        margin-right: 6px;
+                                                    "
+                                                    >1++B</span
+                                                >
+                                                <span
+                                                    style="
+                                                        display: inline-block;
+                                                        width: 44px;
+                                                        line-height: 20px;
+                                                        text-align: center;
+                                                        text-transform: uppercase;
+                                                        color: #fff;
+                                                        background-color: #f4650e;
+                                                        padding: 2px 6px;
+                                                        border-radius: 5px;
+                                                        letter-spacing: -0.03rem;
+                                                        font-weight: bold;
+                                                        font-size: 14px;
+                                                        margin-right: 6px;
+                                                    "
+                                                    >NO.9</span
+                                                >
+                                                <span
+                                                    style="
+                                                        display: inline-flex;
+                                                        align-items: center;
+                                                        line-height: 20px;
+                                                        vertical-align: middle;
+                                                        margin-right: 6px;
+                                                        color: #2173d8;
+                                                    "
+                                                >
+                                                    <img src="/pages/mailing/ico_ice.svg" alt="냉동" style="display: inline-block; height: 20px" />
+                                                    냉동</span
+                                                >
+                                                <span
+                                                    style="
+                                                        display: inline-flex;
+                                                        align-items: center;
+                                                        line-height: 20px;
+                                                        vertical-align: middle;
+                                                        margin-right: 6px;
+                                                        color: #1cacb1;
+                                                    "
+                                                >
+                                                    <img src="/pages/mailing/ico_cold.svg" alt="냉장" style="display: inline-block; height: 20px" />
+                                                    냉장</span
+                                                >
+                                                <span
+                                                    style="
+                                                        display: inline-block;
+                                                        line-height: 20px;
+                                                        vertical-align: middle;
+                                                        font-size: 15px;
+                                                        color: #4ea545;
+                                                        margin-right: 6px;
+                                                    "
+                                                    >무항생제</span
+                                                >
+                                                <span
+                                                    style="
+                                                        display: inline-flex;
+                                                        align-items: center;
+                                                        line-height: 20px;
+                                                        vertical-align: middle;
+                                                        font-size: 15px;
+                                                        color: #2379ca;
+                                                        margin-right: 6px;
+                                                    "
+                                                >
+                                                    <img src="/pages/mailing/ico_fresh.png" alt="신선물류" style="display: inline-block; height: 20px" />
+                                                    신선물류</span
+                                                >
+                                            </div>
+                                            <em style="display: block; font-style: normal; font-size: 16px">브랜드명</em>
+                                            <strong style="display: block; font-size: 20px">제목줄이 나오는 영역입니다</strong>
+                                            <p style="margin: 6px 0 0 0; font-size: 12px; color: #979797">윗등심 + 아랫등심 반두분</p>
+                                            <p style="margin: 6px 0 14px 0; font-size: 14px"><strong>가공일자 2023-06-28</strong>(29개월령)</p>
+                                            <hr style="background-color: #eee; border: 0; height: 1px" />
+                                            <strong style="display: block; font-size: 20px; font-weight: bold; margin: 0 0 10px">5.4kg</strong>
+                                            <table>
+                                                <tr style="font-size: 14px; font-weight: bold">
+                                                    <td style="padding-right: 15px; color: #f02d40">단가(kg당)</td>
+                                                    <td style="color: #4073ff">판매가</td>
+                                                </tr>
+                                                <tr>
+                                                    <td
+                                                        style="
+                                                            padding-right: 15px;
+                                                            font-size: 1.3rem;
+                                                            letter-spacing: -0.08rem;
+                                                            font-weight: bold;
+                                                            color: #f02d40;
+                                                        "
+                                                    >
+                                                        <span style="font-size: 24px">47,700</span>원
+                                                    </td>
+                                                    <td style="font-size: 1.3rem; letter-spacing: -0.08rem; font-weight: bold">
+                                                        <span style="font-size: 24px">472,824</span>원
+                                                    </td>
+                                                </tr>
+                                                <tr style="text-decoration: line-through; color: #979797; font-size: 13px">
+                                                    <td style="padding-right: 15px">39,800원(kg당)</td>
+                                                    <td>39,800원</td>
+                                                </tr>
+                                            </table>
+                                            <div style="margin: 14px 0 0">
+                                                <span style="display: inline-flex; align-items: center; font-size: 1.3rem; font-weight: bold"
+                                                    ><span style="color: #ff2328">적립혜택</span
+                                                    ><img src="/pages/mailing/ico_point.png" style="width: 13px; margin: 0 2px"
+                                                /></span>
+                                                <span style="display: inline-flex; align-items: center; font-size: 1.3rem; font-weight: bold"
+                                                    ><span style="color: #602ff0">즉시할인</span
+                                                    ><img src="/pages/mailing/ico_coupon.png" style="width: 13px; margin: 0 2px"
+                                                /></span>
+                                                <span style="display: inline-flex; align-items: center; font-size: 1.3rem; font-weight: bold"
+                                                    ><span style="color: #000000">숙성할인</span
+                                                    ><img src="/pages/mailing/ico_aging.png" style="width: 13px; margin: 0 2px"
+                                                /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr style="background-color: #eee; border: 0; height: 1px; margin: 20px 0" />
+                                    <div style="display: table; width: 100%">
+                                        <div style="display: inline-block; width: 94px; height: 100%; padding-right: 14px; box-sizing: border-box">
+                                            <span
+                                                style="
+                                                    display: inline-block;
+                                                    width: 80px;
+                                                    height: 80px;
+                                                    border: 1px solid #eee;
+                                                    border-radius: 10px;
+                                                    overflow: hidden;
+                                                "
+                                            >
+                                                <img src="/pages/mailing/img_item_sample_01.png" style="width: 100%" />
+                                            </span>
+                                            <br />
+                                        </div>
+                                        <div style="display: inline-block; vertical-align: top; width: 406px">
+                                            <div style="margin-bottom: 12px; font-weight: bold">
+                                                <span
+                                                    style="
+                                                        display: inline-block;
+                                                        width: 44px;
+                                                        line-height: 20px;
+                                                        text-align: center;
+                                                        text-transform: uppercase;
+                                                        color: #fff;
+                                                        background-color: #f02d40;
+                                                        padding: 2px 6px;
+                                                        border-radius: 5px;
+                                                        letter-spacing: -0.03rem;
+                                                        font-weight: bold;
+                                                        font-size: 14px;
+                                                        margin-right: 6px;
+                                                    "
+                                                    >1++B</span
+                                                >
+                                                <span
+                                                    style="
+                                                        display: inline-block;
+                                                        width: 44px;
+                                                        line-height: 20px;
+                                                        text-align: center;
+                                                        text-transform: uppercase;
+                                                        color: #fff;
+                                                        background-color: #f4650e;
+                                                        padding: 2px 6px;
+                                                        border-radius: 5px;
+                                                        letter-spacing: -0.03rem;
+                                                        font-weight: bold;
+                                                        font-size: 14px;
+                                                        margin-right: 6px;
+                                                    "
+                                                    >NO.9</span
+                                                >
+                                                <span
+                                                    style="
+                                                        display: inline-flex;
+                                                        align-items: center;
+                                                        line-height: 20px;
+                                                        vertical-align: middle;
+                                                        margin-right: 6px;
+                                                        color: #2173d8;
+                                                    "
+                                                >
+                                                    <img src="/pages/mailing/ico_ice.svg" alt="냉동" style="display: inline-block; height: 20px" />
+                                                    냉동</span
+                                                >
+                                                <span
+                                                    style="
+                                                        display: inline-flex;
+                                                        align-items: center;
+                                                        line-height: 20px;
+                                                        vertical-align: middle;
+                                                        margin-right: 6px;
+                                                        color: #1cacb1;
+                                                    "
+                                                >
+                                                    <img src="/pages/mailing/ico_cold.svg" alt="냉장" style="display: inline-block; height: 20px" />
+                                                    냉장</span
+                                                >
+                                                <span
+                                                    style="
+                                                        display: inline-block;
+                                                        line-height: 20px;
+                                                        vertical-align: middle;
+                                                        font-size: 15px;
+                                                        color: #4ea545;
+                                                        margin-right: 6px;
+                                                    "
+                                                    >무항생제</span
+                                                >
+                                                <span
+                                                    style="
+                                                        display: inline-flex;
+                                                        align-items: center;
+                                                        line-height: 20px;
+                                                        vertical-align: middle;
+                                                        font-size: 15px;
+                                                        color: #2379ca;
+                                                        margin-right: 6px;
+                                                    "
+                                                >
+                                                    <img src="/pages/mailing/ico_fresh.png" alt="신선물류" style="display: inline-block; height: 20px" />
+                                                    신선물류</span
+                                                >
+                                            </div>
+                                            <em style="display: block; font-style: normal; font-size: 16px">브랜드명</em>
+                                            <strong style="display: block; font-size: 20px">제목줄이 나오는 영역입니다</strong>
+                                            <p style="margin: 6px 0 0 0; font-size: 12px; color: #979797">윗등심 + 아랫등심 반두분</p>
+                                            <p style="margin: 6px 0 14px 0; font-size: 14px"><strong>가공일자 2023-06-28</strong>(29개월령)</p>
+                                            <hr style="background-color: #eee; border: 0; height: 1px" />
+                                            <strong style="display: block; font-size: 20px; font-weight: bold; margin: 0 0 10px">5.4kg</strong>
+                                            <table>
+                                                <tbody>
+                                                    <tr style="font-size: 14px; font-weight: bold">
+                                                        <td style="padding-right: 15px; color: #f02d40">단가(kg당)</td>
+                                                        <td style="color: #4073ff">판매가</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td
+                                                            style="
+                                                                padding-right: 15px;
+                                                                font-size: 1.3rem;
+                                                                letter-spacing: -0.08rem;
+                                                                font-weight: bold;
+                                                                color: #f02d40;
+                                                            "
+                                                        >
+                                                            <span style="font-size: 24px">47,700</span>원
+                                                        </td>
+                                                        <td style="font-size: 1.3rem; letter-spacing: -0.08rem; font-weight: bold">
+                                                            <span style="font-size: 24px">472,824</span>원
+                                                        </td>
+                                                    </tr>
+                                                    <tr style="text-decoration: line-through; color: #979797; font-size: 13px">
+                                                        <td style="padding-right: 15px">39,800원(kg당)</td>
+                                                        <td>39,800원</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <div style="margin: 14px 0 0">
+                                                <span style="display: inline-flex; align-items: center; font-size: 1.3rem; font-weight: bold"
+                                                    ><span style="color: #ff2328">적립혜택</span
+                                                    ><img src="/pages/mailing/ico_point.png" style="width: 13px; margin: 0 2px"
+                                                /></span>
+                                                <span style="display: inline-flex; align-items: center; font-size: 1.3rem; font-weight: bold"
+                                                    ><span style="color: #602ff0">즉시할인</span
+                                                    ><img src="/pages/mailing/ico_coupon.png" style="width: 13px; margin: 0 2px"
+                                                /></span>
+                                                <span style="display: inline-flex; align-items: center; font-size: 1.3rem; font-weight: bold"
+                                                    ><span style="color: #000000">숙성할인</span
+                                                    ><img src="/pages/mailing/ico_aging.png" style="width: 13px; margin: 0 2px"
+                                                /></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> -->
+								<!-- //아이템 영역 -->
+								<table
+									style="
+										width: 100%;
+										border-collapse: 0;
+										border-top: 1px solid #eeeeee;
+										border-bottom: 1px solid #eeeeee;
+										font-size: 14px;
+										text-align: left;
+										margin-top: 20px;
+									">
+									<tr>
+										<th style="vertical-align: top; padding: 14px 15px; background-color: #fafafa">받는사람</th>
+										<td style="vertical-align: top; padding: 14px 15px">
+											<p style="margin: 0; padding: 0; line-height: 1.2">{user.name}</p>
+											<p style="margin: 0; padding: 0; line-height: 1.2">{user.address}</p>
+											<p style="margin: 0; padding: 0; line-height: 1.2">{user.homePhone}/{user.cellPhone}</p>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p style="font-size: 16px; font-weight: 700; text-align: left; margin: 40px 0 0">결제내역</p>
+								<!-- {order_item_payment} -->
+								<table
+									style="
+										width: 100%;
+										border-collapse: 0;
+										border-top: 1px solid #eeeeee;
+										border-bottom: 1px solid #eeeeee;
+										font-size: 14px;
+										text-align: left;
+										margin-top: 20px;
+									">
+									<tr>
+										<th style="width: 114px; vertical-align: top; padding: 14px 15px; background-color: #fafafa">결제방식</th>
+										<td style="vertical-align: top; padding: 14px 15px">{order.way}</td>
+									</tr>
+									<tr style="border-top: 1px solid #eeeeee">
+										<th style="width: 114px; vertical-align: top; padding: 14px 15px; background-color: #fafafa">결제금액</th>
+										<td style="vertical-align: top; padding: 14px 15px">{order.price}</td>
+									</tr>
+									<tr style="border-top: 1px solid #eeeeee">
+										<th style="width: 114px; vertical-align: top; padding: 14px 15px; background-color: #fafafa">결제상태</th>
+										<td style="vertical-align: top; padding: 14px 15px">{order.status}</td>
+									</tr>
+									<tr style="border-top: 1px solid #eeeeee">
+										<th style="width: 114px; vertical-align: top; padding: 14px 15px; background-color: #fafafa">결제일</th>
+										<td style="vertical-align: top; padding: 14px 15px">{order.date}</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<br />
+								<br />
+								<a
+									href="{site_url}"
+									style="
+										text-decoration: none;
+										background-color: #f02d40;
+										color: #ffffff;
+										width: 100%;
+										padding: 21px 0 20px;
+										text-align: center;
+										display: block;
+										border-radius: 10px;
+										font-size: 18px;
+										font-weight: 700;
+									"
+									>주문/배송 조회</a
+								><br /><br /><br />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p style="font-size: 12px; margin: 0; padding: 0; line-height: 1.5; color: #757575; text-align: left">
+									·&nbsp;본 메일은 발신전용으로 회신되지 않습니다. 문의사항은 고객센터를 이용해 주세요.
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<hr style="margin: 20px 0 30px; opacity: 0.5" />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<img src="{site_url}/assets/images/common/layout/img_logo_gray.png" style="width: 130px" />
+								<p style="font-size: 12px; margin: 0; padding: 0; color: #979797; line-height: 1.4">
+									<span>상호명 : 농협경제지주주식회사(축산경제) </span>&nbsp;&nbsp;&nbsp;<span>대표자 : 안병우</span>
+								</p>
+								<p style="font-size: 12px; margin: 0; padding: 0; color: #979797; line-height: 1.25">
+									사업자등록번호 : 845-85-00512
+									<a
+										href="www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=8458500512"
+										style="color: inherit; text-decoration: underline; padding: 0"
+										>[사업자정보확인]</a
+									>&nbsp;&gt; 사업장소재지 : (04516) 서울특별시 <span>&nbsp;통신판매업 신고번호 : 2017-서울중구-0503</span>&nbsp;&nbsp;&nbsp;
+									개인정보관리책임자 : 김칠석(<a href="help@nhlyvly.com" style="color: inherit; text-decoration: none; padding: 0"
+										>help@nhlyvly.com</a
+									>)
+								</p>
+								<p style="font-size: 12px; margin: 0; padding: 0; color: #979797; margin: 20px 0 60px">
+									Copyright &copy; 농협 LYVLY Co., LTD. All rights reserved.
+								</p>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<!-- <div id="order-cancellation-completed">order-cancellation-completed</div> -->
+				<!-- 포인트 소멸 -->
+				<div id="point-expiration">
+					<table
+						style="
+							display: table;
+							border-collapse: collapse;
+							border-spacing: 0;
+							width: 500px;
+							max-width: 500px;
+							margin: 0 auto;
+							letter-spacing: -0.5px;
+							font-family: Pretendard, Apple SD Gothic Neo, -apple-system, BlinkMacSystemFont, NanumBarunGothic, Malgun Gothic, 맑은 고딕, Dotum,
+								돋움, sans-serif;
+						">
+						<tr>
+							<td>
+								<img src="{site_url}/assets/images/common/layout/img_logo.png" alt="{site_name} " style="width: 230px; margin: 60px 0 20px" />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h2 style="font-size: 22px; font-weight: 800; text-align: center; margin: 40px; display: block">
+									포인트 소멸예정 안내 메일입니다.
+								</h2>
+							</td>
+						</tr>
+						<tr>
+							<td style="text-align: center">
+								보유하고 계신 혜택들이 소멸될 예정임을 알려드립니다.<br />
+								아래의 내역을 확인하신 후, 소멸기간 전에 혜택들을 누리세요!<br /><br />
+							</td>
+						</tr>
+						<tr>
+							<td
+								style="
+									display: block;
+									padding: 27px 44px;
+									background-color: #fafafa;
+									border-radius: 10px;
+									text-align: center;
+									line-height: 1.67;
+									font-size: 15px;
+									word-break: keep-all;
+								">
+								<p style="font-size: 15px"><strong>{name}</strong>고객님, 안녕하세요!</p>
+								<p style="font-size: 14px">
+									고객님께서 보유하고 계신 혜택 중 <span style="color: #4073ff">사용하지 않은 적립금이 소멸될 예정</span>입니다. 고객님의
+									포인트가 자동소멸 되는 일이 없도록 소멸일자 전에 사용하시기 바랍니다. 포인트는 상품주문 시 쿠폰과 함께 이용한도 내에서
+									보조결제수단으로 사용하실 수 있습니다.
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p style="font-size: 16px; font-weight: 700; text-align: left; margin: 40px 0 0">소멸 대상 적립금</p>
+								<p style="color: #7c7e80; font-size: 14px; line-height: 1.5">
+									휴면계정으로 전환되어도 아이디/비밀번호로 로그인 하면 해제할 수 있으며,<br />
+									아래와 같은 서비스에 대한 변경사항이 있으니 참고 바랍니다.
+								</p>
+								<ul style="font-size: 14px; padding: 20px 36px; background-color: #fafafa; line-height: 1.8">
+									<li>사용하지 않은 적립금 : 총 <span style="color: #4073ff">{expiration_content}P</span></li>
+									<li>최초 소멸 일자 : <span style="color: #4073ff">{expiration_date}</span></li>
+								</ul>
+								<p style="font-size: 12px; margin: 0; padding: 0; line-height: 1.5; color: #757575; text-align: left">
+									·&nbsp;본 메일은 {date}일 조회를 기준으로 안내 드립니다..
+								</p>
+								<br />
+								<br />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a
+									href="{site_url}"
+									style="
+										text-decoration: none;
+										background-color: #f02d40;
+										color: #ffffff;
+										width: 100%;
+										padding: 21px 0 20px;
+										text-align: center;
+										display: block;
+										border-radius: 10px;
+										font-size: 18px;
+										font-weight: 700;
+									"
+									>포인트 확인하기</a
+								>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p
+									style="
+										font-size: 12px;
+										margin: 0;
+										padding: 0;
+										line-height: 1.5;
+										color: #757575;
+										text-align: left;
+										word-spacing: -0.5px;
+										margin: 80px 0 0;
+									">
+									·&nbsp;메일수신을 원하지 않는 경우, {site_name} 로그인 후 내 정보 관리에서 e-mail 수신여부를 변경해 주세요.
+								</p>
+								<p style="font-size: 12px; margin: 0; padding: 0; line-height: 1.5; color: #757575; text-align: left">
+									·&nbsp;본 메일은 발신전용으로 회신되지 않습니다. 문의사항은 고객센터를 이용해 주세요.
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<hr style="margin: 20px 0 30px; opacity: 0.5" />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<img src="{site_url}/assets/images/common/layout/img_logo_gray.png" style="width: 130px" />
+								<p style="font-size: 12px; margin: 0; padding: 0; color: #979797; line-height: 1.4">
+									<span>상호명 : 농협경제지주주식회사(축산경제) </span>&nbsp;&nbsp;&nbsp;<span>대표자 : 안병우</span>
+								</p>
+								<p style="font-size: 12px; margin: 0; padding: 0; color: #979797; line-height: 1.25">
+									사업자등록번호 : 845-85-00512
+									<a
+										href="www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=8458500512"
+										style="color: inherit; text-decoration: underline; padding: 0"
+										>[사업자정보확인]</a
+									>&nbsp;&gt; 사업장소재지 : (04516) 서울특별시 <span>&nbsp;통신판매업 신고번호 : 2017-서울중구-0503</span>&nbsp;&nbsp;&nbsp;
+									개인정보관리책임자 : 김칠석(<a href="help@nhlyvly.com" style="color: inherit; text-decoration: none; padding: 0"
+										>help@nhlyvly.com</a
+									>)
+								</p>
+								<p style="font-size: 12px; margin: 0; padding: 0; color: #979797; margin: 20px 0 60px">
+									Copyright &copy; 농협 LYVLY Co., LTD. All rights reserved.
+								</p>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<!-- 휴면안내 -->
+				<div id="dormancy-notice">
+					<table
+						style="
+							display: table;
+							border-collapse: collapse;
+							border-spacing: 0;
+							width: 500px;
+							max-width: 500px;
+							margin: 0 auto;
+							letter-spacing: -0.5px;
+							word-break: keep-all;
+							font-family: Pretendard, Apple SD Gothic Neo, -apple-system, BlinkMacSystemFont, NanumBarunGothic, Malgun Gothic, 맑은 고딕, Dotum,
+								돋움, sans-serif;
+						">
+						<tr>
+							<td>
+								<img src="{site_url}/assets/images/common/layout/img_logo.png" alt="{site_name} " style="width: 230px; margin: 60px 0 20px" />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h2 style="font-size: 22px; font-weight: 800; text-align: center; margin: 40px; display: block">
+									장기간 미사용 계정 휴면 전환 안내
+								</h2>
+							</td>
+						</tr>
+						<tr>
+							<td
+								style="
+									display: block;
+									padding: 27px 44px;
+									background-color: #fafafa;
+									border-radius: 10px;
+									text-align: center;
+									line-height: 1.67;
+									font-size: 14px;
+									word-break: keep-all;
+								">
+								안녕하세요. {site_name} 입니다.<br /><br />
+								회원님의 개인정보보호를 위해 1년 이상 라이블리 도매몰 서비스를 이용하지 않은 계정에 한해 정보통신망 이용촉진 및 정보보호 등에
+								관한 <br />
+								법률(제39조의 5 동법 시행령 제48조의5)에 따라 휴면 계정으로 전환될 예정입니다.
+								<br /><br />
+								회원님의 아이디가 2023년 1월 1일까지 서비스 이용이 없을 경우 <br />
+								휴면 계정으로 전환될 예정이오니, 이를 원치 않으실 경우 하단의<br />
+								‘라이블리 도매 서비스 계속 이용하기‘ 버튼을 클릭해 주시기 바랍니다.
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<br />
+								<br />
+								<a
+									href="{site_url}"
+									style="
+										text-decoration: none;
+										background-color: #f02d40;
+										color: #ffffff;
+										width: 100%;
+										padding: 21px 0 20px;
+										text-align: center;
+										display: block;
+										border-radius: 10px;
+										font-size: 18px;
+										font-weight: 700;
+									"
+									>{site_name} 서비스 계속 이용하기</a
+								><br />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p style="font-size: 16px; font-weight: 700; text-align: left; margin: 40px 0 0">휴면 계정 전환 시 변경 사항</p>
+								<p style="color: #7c7e80; font-size: 14px; line-height: 1.5">
+									휴면계정으로 전환되어도 아이디/비밀번호로 로그인 하면 해제할 수 있으며,<br />
+									아래와 같은 서비스에 대한 변경사항이 있으니 참고 바랍니다.
+								</p>
+								<ul style="font-size: 14px; padding: 20px 36px; background-color: #fafafa; line-height: 1.8">
+									<li>회원의 개인정보는 별도 분리하여 보관</li>
+									<li>메일 수신 중지</li>
+								</ul>
+								<div style="border: 1px solid #eee; padding: 20px 32px; font-size: 14px; line-height: 1.45">
+									<strong>{site_name} 이용약관</strong>
+									<p style="color: #7c7e80">
+										장기 미이용회원은 {site_name} 최종 이용 후 1년 동안 이용 기록이 없는 회원을 말합니다. 이 경우 회원의 개인정보는 일반
+										고객의 개인정보와 분리(휴면계정으로 전환)하여 별도의 DB에 저장 및 관리됩니다. 휴면계정으로 전환되기 30일 이전, 해당
+										내용에 대해 이메일 등을 통해 사전 통지합니다.
+									</p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<br /><br />
+								<p style="font-size: 12px; margin: 0; padding: 0; line-height: 1.5; color: #757575; text-align: left">
+									·&nbsp;본 메일은 발신전용으로 회신되지 않습니다. 문의사항은 고객센터를 이용해 주세요.
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<hr style="margin: 20px 0 30px; opacity: 0.5" />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<img src="{site_url}/assets/images/common/layout/img_logo_gray.png" style="width: 160px; margin-bottom: 10px" />
+								<p style="font-size: 12px; margin: 0; padding: 0; color: #979797; line-height: 1.4">
+									<span>상호명 : 농협경제지주주식회사(축산경제) </span>&nbsp;&nbsp;&nbsp;<span>대표자 : 안병우</span><br />
+									사업자등록번호 : 845-85-00512
+									<a
+										href="www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=8458500512"
+										style="color: inherit; text-decoration: underline; padding: 0"
+										>[사업자정보확인]</a
+									>&nbsp;&gt; 사업장소재지 : (04516) 서울특별시 중구 새문안로 16 (충정로1가)
+									<span>&nbsp;통신판매업 신고번호 : 2017-서울중구-0503</span>&nbsp;&nbsp;&nbsp; 개인정보관리책임자 : 김칠석(<a
+										href="help@nhlyvly.com"
+										style="color: inherit; text-decoration: none; padding: 0"
+										>help@nhlyvly.com</a
+									>)
+								</p>
+								<p style="font-size: 12px; margin: 0; padding: 0; color: #979797; margin: 20px 0 60px">
+									Copyright &copy; 농협 LYVLY Co., LTD. All rights reserved.
+								</p>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<!-- 환불요청 승인 안내 -->
+				<!-- <div id="refund-request">
+                    <table
+                        style="
+                            display: table;
+                            border-collapse: collapse;
+                            border-spacing: 0;
+                            width: 500px;
+                            max-width: 500px;
+                            margin: 0 auto;
+                            letter-spacing: -0.5px;
+                            word-break: keep-all;
+                            font-family: Pretendard, Apple SD Gothic Neo, -apple-system, BlinkMacSystemFont, NanumBarunGothic, Malgun Gothic, 맑은 고딕, Dotum,
+                                돋움, sans-serif;
+                        "
+                    >
+                        <tr>
+                            <td><img src="{site_url}/assets/images/common/layout/img_logo.png" alt="{site_name} " style="width: 230px; margin: 60px 0 20px" /></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h2 style="font-size: 22px; font-weight: 800; text-align: center; margin: 40px; display: block">환불요청 승인 안내</h2>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td
+                                style="
+                                    display: block;
+                                    padding: 27px 44px;
+                                    background-color: #fafafa;
+                                    border-radius: 10px;
+                                    text-align: center;
+                                    line-height: 1.67;
+                                    font-size: 15px;
+                                    word-break: keep-all;
+                                "
+                            >
+                                <strong>홍길동</strong> 고객님이 요청하신 상품의 환불요청이 승인되었습니다.<br />
+                                영업일 기준 1~3일 이내 환불 예정입니다.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p style="font-size: 16px; font-weight: 700; text-align: left; margin: 40px 0 0">환불내역</p>
+                                <table style="text-align: left; border-collapse: collapse; width: 100%">
+                                    <tbody style="font-size: 14px">
+                                        <tr style="border-top: 1px solid #eee; border-bottom: 1px solid #eee">
+                                            <th
+                                                style="
+                                                    font-weight: bold;
+                                                    padding: 14px 20px;
+                                                    width: 114px;
+                                                    box-sizing: border-box;
+                                                    text-align: left;
+                                                    background-color: #fafafa;
+                                                    vertical-align: top;
+                                                "
+                                            >
+                                                상품명
+                                            </th>
+                                            <td style="padding: 14px 20px; line-height: 1.36">제상품명이 들어오는 자리입니다.</td>
+                                        </tr>
+                                        <tr style="border-top: 1px solid #eee; border-bottom: 1px solid #eee">
+                                            <th
+                                                style="
+                                                    font-weight: bold;
+                                                    padding: 14px 20px;
+                                                    width: 114px;
+                                                    box-sizing: border-box;
+                                                    text-align: left;
+                                                    background-color: #fafafa;
+                                                    vertical-align: top;
+                                                "
+                                            >
+                                                주문번호
+                                            </th>
+                                            <td style="padding: 14px 20px; line-height: 1.36">K999999</td>
+                                        </tr>
+                                        <tr style="border-top: 1px solid #eee; border-bottom: 1px solid #eee">
+                                            <th
+                                                style="
+                                                    font-weight: bold;
+                                                    padding: 14px 20px;
+                                                    width: 114px;
+                                                    box-sizing: border-box;
+                                                    text-align: left;
+                                                    background-color: #fafafa;
+                                                    vertical-align: top;
+                                                "
+                                            >
+                                                환불금액
+                                            </th>
+                                            <td style="padding: 14px 20px; line-height: 1.36">25,000원</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <br />
+                                <a
+                                    href="{site_url}"
+                                    style="
+                                        text-decoration: none;
+                                        background-color: #f02d40;
+                                        color: #ffffff;
+                                        width: 100%;
+                                        padding: 21px 0 20px;
+                                        text-align: center;
+                                        display: block;
+                                        border-radius: 10px;
+                                        font-size: 18px;
+                                        font-weight: 700;
+                                    "
+                                    >주문/배송죄회</a
+                                ><br /><br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p style="font-size: 12px; margin: 0; padding: 0; line-height: 1.5; color: #757575; text-align: left">
+                                    ·&nbsp;본 메일은 발신전용으로 회신되지 않습니다. 문의사항은 고객센터를 이용해 주세요.
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <hr style="margin: 20px 0 30px; opacity: 0.5" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="{site_url}/assets/images/common/layout/img_logo_gray.png" style="width: 160px; margin-bottom: 10px" />
+                                <p style="font-size: 12px; margin: 0; padding: 0; color: #979797; line-height: 1.4">
+                                    <span>상호명 : 농협경제지주주식회사(축산경제) </span>&nbsp;&nbsp;&nbsp;<span>대표자 : 안병우</span><br />
+                                    사업자등록번호 : 845-85-00512
+                                    <a href="www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=8458500512" style="color: inherit; text-decoration: underline; padding: 0">[사업자정보확인]</a>&nbsp;&gt; 사업장소재지 :
+                                    (04516) 서울특별시 중구 새문안로 16 (충정로1가)
+                                    <span>&nbsp;통신판매업 신고번호 : 2017-서울중구-0503</span>&nbsp;&nbsp;&nbsp; 개인정보관리책임자 : 김칠석(<a
+                                        href="help@nhlyvly.com"
+                                        style="color: inherit; text-decoration: none; padding: 0"
+                                        >help@nhlyvly.com</a
+                                    >)
+                                </p>
+                                <p style="font-size: 12px; margin: 0; padding: 0; color: #979797; margin: 20px 0 60px">
+                                    Copyright &copy; 농협 LYVLY Co., LTD. All rights reserved.
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+                </div> -->
+				<!-- 광고정보 수신동의 확인안내 -->
+				<!-- <div id="consent-confirmation">
+                    <table
+                        style="
+                            display: table;
+                            border-collapse: collapse;
+                            border-spacing: 0;
+                            width: 500px;
+                            max-width: 500px;
+                            margin: 0 auto;
+                            letter-spacing: -0.5px;
+                            word-break: keep-all;
+                            font-family: Pretendard, Apple SD Gothic Neo, -apple-system, BlinkMacSystemFont, NanumBarunGothic, Malgun Gothic, 맑은 고딕, Dotum,
+                                돋움, sans-serif;
+                        "
+                    >
+                        <tr>
+                            <td>
+                                <img src="{site_url}/assets/images/common/layout/img_logo.png" alt="{site_name} " style="width: 230px; margin: 60px 0 20px" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h2 style="font-size: 22px; font-weight: 800; text-align: center; margin: 40px; display: block">
+                                    광고 정보 수신동의 확인 안내
+                                </h2>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td
+                                style="
+                                    display: block;
+                                    padding: 27px 44px;
+                                    background-color: #fafafa;
+                                    border-radius: 10px;
+                                    text-align: center;
+                                    line-height: 1.67;
+                                    font-size: 15px;
+                                    word-break: keep-all;
+                                "
+                            >
+                                안녕하세요. {site_name}  입니다. <br />
+                                정보통신망법 제50조, 시행령 제62조 제3항에 따라 {site_name} 에서 광고 수신 동의를 진행한 내역을 아래와 같이 안내해 드립니다.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p style="font-size: 16px; font-weight: 700; text-align: left; margin: 40px 0 0">관련 법령</p>
+                                <table style="text-align: left; border-collapse: collapse; width: 100%">
+                                    <tbody style="font-size: 14px">
+                                        <tr style="border-top: 1px solid #eee; border-bottom: 1px solid #eee">
+                                            <th
+                                                style="
+                                                    font-weight: bold;
+                                                    padding: 14px 20px;
+                                                    width: 114px;
+                                                    box-sizing: border-box;
+                                                    text-align: left;
+                                                    background-color: #fafafa;
+                                                    vertical-align: top;
+                                                "
+                                            >
+                                                상품명
+                                            </th>
+                                            <td style="padding: 14px 20px; line-height: 1.36">
+                                                제50조(영리목적의 광고성 정보 전송 제한)<br />
+                                                ⑧ 제1항 또는 제3항에 따라 수신동의를 받은 자는 대통령령으로 정하는 바에 따라 정기적으로 광고성 정보 수신자의
+                                                수신동의 여부를 확인하여야 한다.
+                                            </td>
+                                        </tr>
+                                        <tr style="border-top: 1px solid #eee; border-bottom: 1px solid #eee">
+                                            <th
+                                                style="
+                                                    font-weight: bold;
+                                                    padding: 14px 20px;
+                                                    width: 114px;
+                                                    box-sizing: border-box;
+                                                    text-align: left;
+                                                    background-color: #fafafa;
+                                                    vertical-align: top;
+                                                "
+                                            >
+                                                시행령
+                                            </th>
+                                            <td style="padding: 14px 20px; line-height: 1.36">
+                                                제62조의3(수신동의 여부의 확인)<br />
+                                                ① 법 제50제1항 또는 제3항에 따라 수신자의 사전 동의를 받은 자는 같은 조 제8항에 따라 그 수신동의를 받은 날부터
+                                                2년마다(매 2년이 되는 해의 수신동의를 받은 날과 같은 날 전 까지를 말한다) 해당 수신자의 수신동의 여부를
+                                                확인하여야 한다.
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><br /></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p style="font-size: 16px; font-weight: 700; text-align: left; margin: 40px 0 0">수신 동의 내용</p>
+                                <p style="color: #7c7e80; font-size: 14px; line-height: 1.5">
+                                    수신 동의 철회를 원하시는 경우 ‘회원정보 수정‘에서 진행하시기 바랍니다.
+                                </p>
+                                <table style="text-align: left; border-collapse: collapse; width: 100%">
+                                    <tbody style="font-size: 14px">
+                                        <tr style="border-top: 1px solid #eee; border-bottom: 1px solid #eee">
+                                            <th
+                                                style="
+                                                    font-weight: bold;
+                                                    padding: 14px 20px;
+                                                    width: 114px;
+                                                    box-sizing: border-box;
+                                                    text-align: left;
+                                                    background-color: #fafafa;
+                                                    vertical-align: top;
+                                                "
+                                            >
+                                                동의여부
+                                            </th>
+                                            <td style="padding: 14px 20px; line-height: 1.36">
+                                                <a href="{site_url}" style="text-decoration: none; color: #2680eb">동의 / 2023-01-01</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><br /></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p style="font-size: 12px; margin: 0; padding: 0; line-height: 1.5; color: #757575; text-align: left; margin: 80px 0 0">
+                                    ·&nbsp;메일수신을 원하지 않는 경우, {site_name}  로그인 후 내 정보 관리에서 e-mail 수신여부를 변경해 주세요.
+                                </p>
+                                <p style="font-size: 12px; margin: 0; padding: 0; line-height: 1.5; color: #757575; text-align: left">
+                                    ·&nbsp;본 메일은 발신전용으로 회신되지 않습니다. 문의사항은 고객센터를 이용해 주세요.
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <hr style="margin: 20px 0 30px; opacity: 0.5" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="{site_url}/assets/images/common/layout/img_logo_gray.png" style="width: 160px; margin-bottom: 10px" />
+                                <p style="font-size: 12px; margin: 0; padding: 0; color: #979797; line-height: 1.4">
+                                    <span>상호명 : 농협경제지주주식회사(축산경제) </span>&nbsp;&nbsp;&nbsp;<span>대표자 : 안병우</span><br />
+                                    사업자등록번호 : 845-85-00512
+                                    <a href="www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=8458500512" style="color: inherit; text-decoration: underline; padding: 0">[사업자정보확인]</a>&nbsp;&gt; 사업장소재지 :
+                                    (04516) 서울특별시 중구 새문안로 16 (충정로1가)
+                                    <span>&nbsp;통신판매업 신고번호 : 2017-서울중구-0503</span>&nbsp;&nbsp;&nbsp; 개인정보관리책임자 : 김칠석(<a
+                                        href="help@nhlyvly.com"
+                                        style="color: inherit; text-decoration: none; padding: 0"
+                                        >help@nhlyvly.com</a
+                                    >)
+                                </p>
+                                <p style="font-size: 12px; margin: 0; padding: 0; color: #979797; margin: 20px 0 60px">
+                                    Copyright &copy; 농협 LYVLY Co., LTD. All rights reserved.
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+                </div> -->
+			</div>
+		</div>
+		<!-- 
+            // 이메일 템플릿 디폴트 구조 //
+                                <table
+                        style="
+                        display: table; border-collapse: collapse;
+	border-spacing: 0;
+                        width: 500px;
+                        max-width: 500px;
+                        margin: 0 auto;
+                        letter-spacing: -0.5px;
+                        font-family: Pretendard, Apple SD Gothic Neo, -apple-system, BlinkMacSystemFont, NanumBarunGothic, Malgun Gothic, 맑은 고딕, Dotum,
+                        돋움, sans-serif;
+                        "
+                        >
+                        <tr>
+                            <td><img src="{site_url}/assets/images/common/layout/img_logo.png" alt="{site_name} " style="width: 230px; margin: 60px 0 20px" /></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h2 style="font-size: 22px; font-weight: 800; text-align: center; margin: 40px; display: block">휴면 안내</h2>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                내용추가
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p style="font-size: 16px; font-weight: 700; text-align: left; margin: 40px 0 0">휴면 계정 전환 시 변경 사항</p>
+                                <p style="color: #7c7e80; font-size: 14px; line-height: 1.5">
+                                    휴면계정으로 전환되어도 아이디/비밀번호로 로그인 하면 해제할 수 있으며,<br />
+                                    아래와 같은 서비스에 대한 변경사항이 있으니 참고 바랍니다.
+                                </p>
+                                <ul style="font-size: 14px; padding: 20px 36px; background-color: #fafafa; line-height: 1.8">
+                                    <li>회원의 개인정보는 별도 분리하여 보관</li>
+                                    <li>메일 수신 중지</li>
+                                </ul>
+                                <div style="border: 1px solid #eee; padding: 20px 32px; font-size: 14px; line-height: 1.45">
+                                    <strong>{site_name}  이용약관</strong>
+                                    <p>
+                                        장기 미이용회원은 {site_name}  최종 이용 후 1년 동안 이용 기록이 없는 회원을 말합니다. 이 경우 회원의 개인정보는 일반
+                                        고객의 개인정보와 분리(휴면계정으로 전환)하여 별도의 DB에 저장 및 관리됩니다. 휴면계정으로 전환되기 30일 이전, 해당
+                                        내용에 대해 이메일 등을 통해 사전 통지합니다.
+                                    </p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><br /></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p style="font-size: 12px; margin: 0; padding: 0; line-height: 1.5; color: #757575; text-align: left; word-spacing:-0.5px; margin: 80px 0 0 ">
+                                    ·&nbsp;메일수신을 원하지 않는 경우, {site_name}  로그인 후 내 정보 관리에서 e-mail 수신여부를 변경해 주세요.
+                                </p>
+                                <p style="font-size: 12px; margin: 0; padding: 0; line-height: 1.5; color: #757575; text-align: left">
+                                    ·&nbsp;본 메일은 발신전용으로 회신되지 않습니다. 문의사항은 고객센터를 이용해 주세요.
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <hr style="margin: 20px 0 30px; opacity: 0.5" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="{site_url}/assets/images/common/layout/img_logo_gray.png" style="width: 130px;" />
+                                <p style="font-size: 12px; margin: 0; padding: 0; color: #979797; line-height: 1.4;">
+                                    <span>상호명 : 농협경제지주주식회사(축산경제) </span>&nbsp;&nbsp;&nbsp;<span>대표자 : 안병우</span>
+                                </p>
+                                <p style="font-size: 12px; margin: 0; padding: 0; color: #979797; line-height: 1.25;">
+                                    사업자등록번호 : 845-85-00512
+                                    <a href="www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=8458500512" style="color: inherit; text-decoration: underline; padding: 0">[사업자정보확인]</a>&nbsp;&gt;
+                                사업장소재지 : (04516) 서울특별시 <span>&nbsp;통신판매업 신고번호 : 2017-서울중구-0503</span>&nbsp;&nbsp;&nbsp; 개인정보관리책임자 : 김칠석(<a
+                                        href="help@nhlyvly.com"
+                                        style="color: inherit; text-decoration: none; padding: 0"
+                                        >help@nhlyvly.com</a
+                                        >)
+                                </p>
+                                <p style="font-size: 12px; margin: 0; padding: 0; color: #979797; margin: 20px 0 60px">
+                                    Copyright &copy; 농협 LYVLY Co., LTD. All rights reserved.
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+            
+            
+            
+            -->
+	</body>
+</html>

@@ -1,0 +1,242 @@
+.item-info-desc {
+	flex: 1;
+	color: #000;
+}
+
+.item-info-desc.mobile {
+	position: relative;
+}
+
+/* 아이템 타이틀*/
+.item-title {
+	margin: 1.2rem 0 2rem;
+	padding-bottom: 2rem;
+	border-bottom: 1px solid #eeeeee;
+}
+
+.item-title .brand {
+	font-size: 1.8rem;
+	letter-spacing: -0.3px;
+	line-height: 1;
+	font-weight: 400;
+}
+
+.item-title .main {
+	margin-top: 2px;
+	font-weight: bold;
+	letter-spacing: -0.7px;
+	line-height: 1.25;
+	cursor: pointer;
+}
+
+.item-title .sub {
+	margin-top: 0.6rem;
+	font-size: 1.4rem;
+	font-weight: 400;
+	letter-spacing: -0.42px;
+	text-align: left;
+	color: #979797;
+	line-height: 1.25;
+}
+
+/* 가격정보 테이블 */
+.item-price-area {
+	width: 100%;
+}
+
+.unit td {
+	font-size: 14px;
+	font-weight: bold;
+	letter-spacing: -0.49px;
+}
+
+.unit td.consumer {
+	color: #f02d40;
+}
+
+.unit td.sells {
+	color: #757575;
+}
+
+.price td {
+	line-height: 1.5;
+}
+
+.price td,
+.price td span {
+	font-size: 2.2rem;
+	font-weight: bold;
+	letter-spacing: -0.77px;
+}
+
+.price td span {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.price td.consumer {
+	font-size: 2.6rem;
+	color: red;
+}
+
+.price td.sells {
+	font-size: 2.6rem;
+}
+
+.price td strong {
+	font-size: 1.4rem;
+	line-height: 1;
+	margin-left: 1px;
+	margin-bottom: -2px;
+}
+
+.price td.sells strong {
+	/* color: #323ef3; */
+}
+
+.price-ori {
+	font-size: 1.4rem;
+	font-weight: normal;
+	letter-spacing: -0.49px;
+	color: #979797;
+	text-decoration: line-through;
+}
+
+.item-price-benefit td {
+	line-height: 1.5;
+}
+
+.item-price-benefit .unit-accent,
+.item-price-benefit .sells-accent {
+	position: relative;
+	width: 100%;
+	white-space: nowrap;
+}
+
+.item-price-benefit .unit-accent strong,
+.item-price-benefit .sells-accent strong {
+	display: inline-block;
+	width: fit-content;
+	height: 2rem;
+	line-height: 2rem;
+	font-size: 1.1rem;
+	padding: 0;
+	border-radius: 3px;
+	margin-bottom: 0.4rem;
+}
+
+/* 이력정보 */
+.item-process {
+	width: 100%;
+	margin-top: 1.4rem;
+	margin-bottom: 1.4rem;
+	padding-top: 1.4rem;
+	border-top: 1px solid #eeeeee;
+}
+
+.item-process .process-name,
+.item-process .process-slaughter {
+	display: inline-block;
+}
+
+.item-process .process-slaughter {
+	margin-left: 1rem;
+}
+
+.divide-wrap {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+
+.item-price-area-mobile {
+	display: none;
+}
+
+.check-wrap {
+	margin-right: 1rem;
+}
+
+.horizon.modified .item-thumbnail ~ .item-info-desc .item-process {
+	padding: 1.8rem 0;
+	margin: 1.8rem 0;
+}
+
+.horizon.modified .item-thumbnail ~ .item-info-desc .item-benefits {
+	margin: 0;
+}
+
+/* 노트북 */
+@media (max-width: 1194px) {
+	/** .item-process **/
+	.item-process .process-name,
+	.item-process .process-slaughter {
+		display: block;
+	}
+
+	.item-process .process-slaughter {
+		margin-left: 0;
+	}
+}
+
+/* 태블릿 */
+@media (max-width: 991px) {
+	.item-price-area-mobile {
+		width: 100%;
+		display: block;
+	}
+
+	.item-price-area-mobile .item-weight {
+		margin-bottom: 1.4rem;
+	}
+
+	.item-price-area-mobile .item-weight p {
+		font-size: 2rem;
+		font-weight: bold;
+	}
+
+	/* 가격정보 테이블 */
+	.item-price-area {
+		display: none;
+	}
+
+	/* 이력정보 */
+	.divide-wrap .item-process {
+		border: none;
+		padding: 0;
+		margin: 0;
+	}
+
+}
+
+/* 태블릿 */
+@media (max-width: 768px) {
+	.divide-wrap {
+		margin-bottom: 2rem;
+	}
+
+	.item-thumbnail {
+		padding: 0 1.6rem;
+	}
+
+	.item.horizon.modified .divide-wrap,
+	.horizon.modified .item-thumbnail ~ .item-info-desc .item-process .process {
+		margin: 0;
+	}
+
+	.horizon.modified .item-thumbnail ~ .item-info-desc .item-process,
+	.horizon.modified .item-thumbnail ~ .item-info-desc .item-benefits {
+		padding: 0;
+		margin: 0 0 1.4rem;
+	}
+}
+
+/* 모바일 */
+@media (max-width: 480px) {
+	/*  등급정보 */
+	.grade-status {
+		display: none;
+	}
+}

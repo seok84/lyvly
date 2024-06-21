@@ -1,0 +1,205 @@
+/*폰트 여러개 지정하는 방법*/
+@font-face {
+	font-family: "GmarketSansLight";
+	src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "GmarketSansMedium";
+	src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "GmarketSansBold";
+	src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* 20240223 */
+.season-event-container {
+	position: relative;
+	display: block;
+	margin-bottom: 2rem;
+	overflow: hidden;
+}
+
+.season-event-container .dimmed-bg {
+	position: absolute;
+}
+
+.season-event-period {
+	position: absolute;
+	bottom: 1rem;
+	right: 1rem;
+	font-family: "GmarketSansBold";
+	font-size: 1.2em;
+	color: purple;
+}
+
+.event-content .event-edit-content {
+	display: block;
+	margin: 0 auto;
+	max-width: 86rem;
+}
+.event-content .event-edit-content img {
+	padding: 0;
+	margin: 0 auto;
+}
+
+.roulette-container {
+	position: relative;
+	display: block;
+	font-family: "GmarketSansMedium";
+	font-weight: 500;
+}
+
+.roulette {
+	width: 100%;
+	height: auto;
+}
+
+.roulette.position-center {
+	top: 7%;
+	transform: translateX(-50%);
+}
+
+.roulette .arrow {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 1;
+}
+
+.position-center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.roulette-canvas {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family: "GmarketSansBold";
+	font-size: 30px;
+	font-weight: 700;
+}
+
+button.position-center img {
+	transition: scale 0.5s ease-out;
+}
+
+button.position-center:hover img {
+	transform: scale(1.2);
+}
+
+.remain-counter {
+	position: absolute;
+	bottom: 10%;
+	left: 50%;
+	display: inline-flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 9.6rem;
+	padding: 0 5rem;
+	background-color: #fff;
+	border: 1px solid #d7d7d7;
+	border-radius: 10rem;
+	transform: translate(-50%, 0%);
+	font-size: 3rem;
+}
+
+.remain-counter span {
+	flex: none;
+	display: inline-flex;
+	align-items: center;
+	line-height: 1;
+	font-family: "GmarketSansMedium";
+	font-weight: 500;
+	transform: translateY(5%);
+}
+
+.remain-counter span strong {
+	display: inline-block;
+	line-height: 1;
+	margin-right: 1rem;
+	font-size: 1.5em;
+	font-family: "GmarketSansBold";
+	font-weight: 700;
+	color: #ef3d3d;
+}
+
+.remain-counter .divider {
+	width: 1px;
+	height: 0.9em;
+	margin: 0 4rem;
+	background-color: #ddd;
+}
+
+.featured-list .season-event.list-wrap li {
+	max-width: unset;
+	margin-bottom: 0;
+}
+
+.featured-list .season-event a .thumbnail {
+	height: auto;
+	padding-bottom: 0;
+}
+
+.featured-list .season-event .thumbnail img {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: auto;
+	transform: none;
+	object-fit: cover;
+}
+
+@media (max-width: 1024px) {
+	.roulette {
+		width: calc(100% - 3.2rem);
+	}
+
+	.roulette.position-center {
+		top: 4%;
+	}
+
+	.roulette .arrow {
+		width: 80px;
+	}
+
+	button.position-center {
+		width: 30vw;
+	}
+
+	.back-circle {
+		width: 95%;
+		margin: 0 auto;
+	}
+
+	.remain-counter {
+		bottom: 8%;
+		width: 65%;
+		height: 5rem;
+		padding: 0 1.4rem;
+		font-size: 1.8rem;
+	}
+
+	.remain-counter .divider {
+		margin: 0 1rem;
+	}
+}
+
+@media (max-width: 688px) {
+	.roulette .arrow {
+		width: 12vw;
+	}
+}

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30.003" height="30" viewBox="0 0 30.003 30">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_30315" data-name="사각형 30315" width="30" height="5" transform="translate(1111 206)" fill="#fff" stroke="#000" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="그룹_34847" data-name="그룹 34847" transform="translate(-1107.998 -285)">
+    <path id="패스_11513" data-name="패스 11513" d="M0,0H30V30H0Z" transform="translate(1108 285)" fill="rgba(255,188,188,0.38)" opacity="0"/>
+    <path id="패스_11514" data-name="패스 11514" d="M0,0H30V30H0Z" transform="translate(1108 285)" fill="rgba(255,188,188,0.38)" opacity="0"/>
+    <g id="마스크_그룹_412" data-name="마스크 그룹 412" transform="translate(-3 83)" clip-path="url(#clip-path)">
+      <g id="그룹_31245" data-name="그룹 31245" transform="translate(0 -4)">
+        <path id="빼기_5" data-name="빼기 5" d="M13123,22102h-30v-18h30v6.174a2.944,2.944,0,0,0-1-.172,3,3,0,1,0,1,5.826V22102Z" transform="translate(-11982 -21874)" fill="#fff"/>
+        <path id="빼기_5_-_윤곽선" data-name="빼기 5 - 윤곽선" d="M13122,22101v-4a4,4,0,1,1,0-8v-4h-28v16h28m1,1h-30v-18h30v6.174a2.944,2.944,0,0,0-1-.172,3,3,0,1,0,1,5.826Z" transform="translate(-11982 -21874)"/>
+        <path id="선_360" data-name="선 360" d="M.5,17.5h-1v-3h1Zm0-5h-1v-3h1Zm0-5h-1v-3h1Zm0-5h-1v-3h1Z" transform="translate(1132.5 210.5)"/>
+      </g>
+    </g>
+    <g id="그룹_31244" data-name="그룹 31244" transform="translate(-3 83)">
+      <path id="빼기_5-2" data-name="빼기 5" d="M13123,22102h-30v-18h30v6.174a2.944,2.944,0,0,0-1-.172,3,3,0,1,0,1,5.826V22102Z" transform="translate(-11982 -21874)" fill="#fff"/>
+      <path id="빼기_5_-_윤곽선-2" data-name="빼기 5 - 윤곽선" d="M13122,22101v-4a4,4,0,1,1,0-8v-4h-28v16h28m1,1h-30v-18h30v6.174a2.944,2.944,0,0,0-1-.172,3,3,0,1,0,1,5.826Z" transform="translate(-11982 -21874)"/>
+      <path id="선_360-2" data-name="선 360" d="M.5,17.5h-1v-3h1Zm0-5h-1v-3h1Zm0-5h-1v-3h1Zm0-5h-1v-3h1Z" transform="translate(1132.5 210.5)"/>
+    </g>
+    <path id="패스_11515" data-name="패스 11515" d="M5.109.182A3.8,3.8,0,0,0,8.177-1.235l-1.014-1.2a2.653,2.653,0,0,1-1.989.949c-1.521,0-2.509-1.261-2.509-3.354,0-2.067,1.092-3.315,2.548-3.315a2.481,2.481,0,0,1,1.768.806L7.995-8.567A3.828,3.828,0,0,0,5.174-9.8C2.743-9.8.7-7.943.7-4.771.7-1.56,2.665.182,5.109.182Z" transform="translate(1114 307)" fill="#da0015"/>
+  </g>
+</svg>

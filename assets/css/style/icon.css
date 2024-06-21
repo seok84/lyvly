@@ -1,0 +1,57 @@
+.ico {
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.ico-list-category {
+    background-image: url("~/assets/images/common/img_sprite_category.png");
+    background-size: 150px auto;
+}
+
+.ico-list-category.active {
+    background-image: url("~/assets/images/common/img_sprite_category_active.png");
+}
+
+.ico-saled-item {
+    background-position: 0 0;
+}
+.ico-cow {
+    background-position: -30px 0;
+}
+.ico-pig {
+    background-position: -60px 0;
+}
+.ico-milkcow {
+    background-position: -90px 0;
+}
+.ico-meat {
+    background-position: -120px 0;
+}
+
+/* mobile */
+
+.ico-m-category,
+.nuxt-link-exact-active.off .ico-m-category {
+    background-image: url("~/assets/images/common/mobile/img_m_category.png");
+    background-size: 150px auto;
+}
+.active .ico-m-category,
+.nuxt-link-exact-active .ico-m-category {
+    background-image: url("~/assets/images/common/mobile/img_m_category_active.png");
+}
+
+.ico-home {
+    background-position: 0 0;
+}
+.ico-menu {
+    background-position: -30px 0;
+}
+.ico-cart {
+    background-position: -60px 0;
+}
+.ico-mypage {
+    background-position: -90px 0;
+}
+.ico-trade {
+    background-position: -118px 0;
+}

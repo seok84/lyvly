@@ -1,0 +1,86 @@
+.mobile.category-wrapper .gnb-wrap.on .gnb .sub-menu {
+    right: unset;
+    left: 13rem;
+    width: calc(100vw - 13rem);
+    height: calc(100% - 7.1rem) !important;
+    padding: 0;
+    overflow: hidden;
+}
+
+.mobile.category-wrapper .gnb-wrap .lnb-depth-02 a {
+    display: inline-block;
+    width: 100%;
+    height: 4.2rem;
+    line-height: 1.3;
+    padding: 1rem 2rem;
+    background-color: #fbfbfb;
+    color: #757575;
+    font-size: 1.4rem;
+    font-weight: 400;
+    box-sizing: border-box;
+    word-break: break-all;
+}
+
+.mobile.category-wrapper .gnb-wrap .lnb-depth-02 a:hover {
+    color: #000;
+}
+
+.mobile.category-wrapper .gnb-wrap .gnb .sub-menu {
+    padding-top: 0;
+    background-color: #fbfbfb;
+}
+
+.mobile.category-wrapper .gnb-wrap.on .gnb .sub-menu ul {
+    margin: 0;
+    overflow-y: hidden;
+}
+.mobile.category-wrapper .gnb-wrap.on .gnb .sub-menu ul.lnb-depth-02 {
+    height: calc(100% - 5.2rem);
+}
+
+.mobile.category-wrapper .category-content .lnb-depth-02-title {
+    position: relative;
+    height: 5.2rem;
+    padding: 0 1.7rem 0 1.4rem;
+    background-color: #fff;
+    box-sizing: border-box;
+    letter-spacing: -0.08rem;
+}
+
+.mobile.category-wrapper li[data-menu="menu5"] .lnb-depth-02-title {
+    height: auto;
+    min-height: 5.2rem;
+    flex-wrap: wrap;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.mobile.category-wrapper .category-content .lnb-depth-02-title > a {
+    right: 1.4rem;
+    padding: 0;
+    color: #979797;
+}
+
+.mobile.category-wrapper li[data-menu="menu5"] .lnb-depth-02-title > a {
+    display: block;
+    width: 100%;
+    position: relative;
+    right: unset;
+    text-align: left;
+    margin-top: 6px;
+}
+
+/* 
+특정페이지에 보이지 않도록
+*/
+
+@media (max-width: 768px) {
+    header[data-page="cart"] ~ footer {
+        padding-bottom: 22rem;
+    }
+    header[data-page="cart"] ~ footer .category-wrapper.mobile,
+    header[data-page="featured-dry-aging"] ~ footer .category-wrapper.mobile,
+    header[data-page="display-dry-aging"] ~ footer .category-wrapper.mobile {
+        display: none !important;
+    }
+}
